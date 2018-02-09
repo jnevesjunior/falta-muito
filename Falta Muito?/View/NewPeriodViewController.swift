@@ -33,7 +33,7 @@ class NewPeriodViewController: UIViewController {
         let maxNote = Double(self.averageTextField.text ?? "") ?? 0
         
         self.periodPresenter.savePeriod(name: name, courses: courses, averageNote: averageNote, maxNote: maxNote)
-        self.performSegue(withIdentifier: "homeID", sender: nil)
+        self.performSegue(withIdentifier: "coursesID", sender: nil)
     }
     
     private func isValidData() -> Bool {

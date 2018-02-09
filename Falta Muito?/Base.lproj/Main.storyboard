@@ -138,7 +138,7 @@ Calma, você consegue!</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: 1 Semestre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FSX-Vm-5nR">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="qwerty" borderStyle="roundedRect" placeholder="Ex: 1 Semestre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FSX-Vm-5nR">
                                 <rect key="frame" x="16" y="188" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="NYD-Q1-cYF"/>
@@ -153,7 +153,7 @@ Calma, você consegue!</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: 5" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LKc-XP-69a">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2" borderStyle="roundedRect" placeholder="Ex: 5" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LKc-XP-69a">
                                 <rect key="frame" x="16" y="255" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="FKS-iA-sA4"/>
@@ -168,7 +168,7 @@ Calma, você consegue!</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: 7" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ihw-1C-CPe">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="7" borderStyle="roundedRect" placeholder="Ex: 7" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ihw-1C-CPe">
                                 <rect key="frame" x="16" y="322" width="163.5" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VM1-b1-z7b"/>
@@ -183,7 +183,7 @@ Calma, você consegue!</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex: 10" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dq7-0o-lM6">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="10" borderStyle="roundedRect" placeholder="Ex: 10" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dq7-0o-lM6">
                                 <rect key="frame" x="195.5" y="322" width="163.5" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Ilc-IH-6vW"/>
@@ -226,7 +226,8 @@ Calma, você consegue!</string>
                         <viewLayoutGuide key="safeArea" id="8Q7-Od-Zui"/>
                     </view>
                     <navigationItem key="navigationItem" title="Lá vamos nós 🧙🏻‍♂️" id="cBF-bn-L40">
-                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="E1D-ye-MBS">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="KyK-E6-Ihs"/>
+                        <barButtonItem key="rightBarButtonItem" title="Próximo" id="E1D-ye-MBS">
                             <connections>
                                 <action selector="saveAction:" destination="Oam-ca-MMu" id="ft5-RT-SD7"/>
                             </connections>
@@ -238,11 +239,66 @@ Calma, você consegue!</string>
                         <outlet property="maxTextField" destination="Dq7-0o-lM6" id="UnX-t1-Fj3"/>
                         <outlet property="nameTextField" destination="FSX-Vm-5nR" id="9P7-Jq-mIs"/>
                         <segue destination="5ZA-yv-Ygh" kind="presentation" identifier="homeID" id="XgD-Jm-g7d"/>
+                        <segue destination="DQS-bm-q2c" kind="show" identifier="coursesID" id="0Sm-0w-jEc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXM-up-E9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2736.8000000000002" y="-310.79460269865069"/>
+            <point key="canvasLocation" x="2737" y="-312"/>
+        </scene>
+        <!--Matérias-->
+        <scene sceneID="Fos-Y0-oWO">
+            <objects>
+                <viewController id="DQS-bm-q2c" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="evd-oC-svI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sl3-mr-DcG">
+                                <rect key="frame" x="16" y="89" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="e8L-is-Kd3"/>
+                                </constraints>
+                                <string key="text">Vamos nos organizar (Só um pouco)
+Quais os nomes das matérias?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jDh-e1-djg">
+                                <rect key="frame" x="16" y="159" width="343" height="443"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gnC-AJ-CeM">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gnC-AJ-CeM" id="UJk-IV-oF7">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jDh-e1-djg" firstAttribute="top" secondItem="Sl3-mr-DcG" secondAttribute="bottom" constant="20" id="3Qu-mg-tFj"/>
+                            <constraint firstItem="8hC-vv-fNH" firstAttribute="trailing" secondItem="Sl3-mr-DcG" secondAttribute="trailing" constant="16" id="JUA-P9-oNX"/>
+                            <constraint firstItem="Sl3-mr-DcG" firstAttribute="top" secondItem="8hC-vv-fNH" secondAttribute="top" constant="25" id="ceU-OC-G34"/>
+                            <constraint firstItem="Sl3-mr-DcG" firstAttribute="leading" secondItem="8hC-vv-fNH" secondAttribute="leading" constant="16" id="ehx-TT-amd"/>
+                            <constraint firstItem="jDh-e1-djg" firstAttribute="leading" secondItem="8hC-vv-fNH" secondAttribute="leading" constant="16" id="hS8-Vo-Mzg"/>
+                            <constraint firstItem="8hC-vv-fNH" firstAttribute="trailing" secondItem="jDh-e1-djg" secondAttribute="trailing" constant="16" id="v8d-6Q-O7K"/>
+                            <constraint firstItem="8hC-vv-fNH" firstAttribute="bottom" secondItem="jDh-e1-djg" secondAttribute="bottom" constant="16" id="zIo-h0-Ddz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8hC-vv-fNH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Matérias" id="nIu-2J-u3j">
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" style="plain" id="wyQ-Jy-dGT"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6RE-TB-8xi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3642" y="-311"/>
         </scene>
         <!--Matérias-->
         <scene sceneID="vAj-7g-o8N">
