@@ -12,6 +12,7 @@
 		2D4563FB202B793F00A25235 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4563FA202B793F00A25235 /* CoreDataStack.swift */; };
 		2D4563FD202B79C400A25235 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4563FC202B79C400A25235 /* CoreDataService.swift */; };
 		2D456400202B7B8A00A25235 /* PeriodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4563FF202B7B8A00A25235 /* PeriodPresenter.swift */; };
+		2D556E56202D1F8100A3DF8D /* SetCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D556E55202D1F8100A3DF8D /* SetCoursesViewController.swift */; };
 		2D955024202CA693001BF93F /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D955020202CA693001BF93F /* Note+CoreDataClass.swift */; };
 		2D955025202CA693001BF93F /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D955021202CA693001BF93F /* Note+CoreDataProperties.swift */; };
 		2D955026202CA693001BF93F /* Course+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D955022202CA693001BF93F /* Course+CoreDataClass.swift */; };
@@ -34,6 +35,7 @@
 		2D4563FA202B793F00A25235 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		2D4563FC202B79C400A25235 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		2D4563FF202B7B8A00A25235 /* PeriodPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodPresenter.swift; sourceTree = "<group>"; };
+		2D556E55202D1F8100A3DF8D /* SetCoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCoursesViewController.swift; sourceTree = "<group>"; };
 		2D955020202CA693001BF93F /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2D955021202CA693001BF93F /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2D955022202CA693001BF93F /* Course+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				2DA51F0B2019623300ED6B3F /* TableViewCell */,
 				2DA51F052019588000ED6B3F /* PeriodViewController.swift */,
 				2DB0AC9A202B3F8600785509 /* NewPeriodViewController.swift */,
+				2D556E55202D1F8100A3DF8D /* SetCoursesViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				2DD0A6C2200D315800B18E07 /* AppDelegate.swift in Sources */,
 				2D456400202B7B8A00A25235 /* PeriodPresenter.swift in Sources */,
 				2D4563FB202B793F00A25235 /* CoreDataStack.swift in Sources */,
+				2D556E56202D1F8100A3DF8D /* SetCoursesViewController.swift in Sources */,
 				2DB0AC9B202B3F8600785509 /* NewPeriodViewController.swift in Sources */,
 				2D955026202CA693001BF93F /* Course+CoreDataClass.swift in Sources */,
 				2DD0A6CA200D315800B18E07 /* Falta_Muito.xcdatamodeld in Sources */,

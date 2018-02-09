@@ -249,7 +249,7 @@ Calma, você consegue!</string>
         <!--Matérias-->
         <scene sceneID="Fos-Y0-oWO">
             <objects>
-                <viewController id="DQS-bm-q2c" sceneMemberID="viewController">
+                <viewController id="DQS-bm-q2c" customClass="SetCoursesViewController" customModule="Falta_Muito_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="evd-oC-svI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -269,12 +269,21 @@ Quais os nomes das matérias?</string>
                                 <rect key="frame" x="16" y="159" width="343" height="443"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gnC-AJ-CeM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="courseCell" textLabel="fzM-Zf-pfv" style="IBUITableViewCellStyleDefault" id="gnC-AJ-CeM">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gnC-AJ-CeM" id="UJk-IV-oF7">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fzM-Zf-pfv">
+                                                    <rect key="frame" x="15" y="0.0" width="313" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -295,6 +304,9 @@ Quais os nomes das matérias?</string>
                     <navigationItem key="navigationItem" title="Matérias" id="nIu-2J-u3j">
                         <barButtonItem key="rightBarButtonItem" title="Salvar" style="plain" id="wyQ-Jy-dGT"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="courseTableView" destination="jDh-e1-djg" id="AQw-wD-iVP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6RE-TB-8xi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

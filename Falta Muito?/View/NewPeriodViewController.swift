@@ -15,6 +15,7 @@ class NewPeriodViewController: UIViewController {
     @IBOutlet weak var maxTextField: UITextField!
     
     private var periodPresenter: PeriodPresenter!
+    private var period: Period!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,7 @@ class NewPeriodViewController: UIViewController {
         let averageNote = Double(self.averageTextField.text ?? "") ?? 0
         let maxNote = Double(self.averageTextField.text ?? "") ?? 0
         
-        self.periodPresenter.savePeriod(name: name, courses: courses, averageNote: averageNote, maxNote: maxNote)
+        self.period = self.periodPresenter.savePeriod(name: name, courses: courses, averageNote: averageNote, maxNote: maxNote)
         self.performSegue(withIdentifier: "coursesID", sender: nil)
     }
     

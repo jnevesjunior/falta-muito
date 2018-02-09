@@ -24,13 +24,13 @@ class PeriodPresenter {
         }
     }
     
-    func savePeriod(name: String, courses: Int, averageNote: Double, maxNote: Double) {
+    func savePeriod(name: String, courses: Int, averageNote: Double, maxNote: Double) -> Period {
         var periodArray = [String: Any]()
         periodArray["name"] = name
         periodArray["courses"] = courses
         periodArray["averageNote"] = averageNote
         periodArray["maxNote"] = maxNote
 
-        _ = Period().createEntity(array: periodArray as [String : AnyObject])
+        return Period().createEntity(array: periodArray as [String : AnyObject])!
     }
 }
