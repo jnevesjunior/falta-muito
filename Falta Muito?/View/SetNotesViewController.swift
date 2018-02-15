@@ -1,39 +1,52 @@
 //
-//  SetCoursesViewController.swift
+//  SetNotesViewController.swift
 //  Falta Muito?
 //
-//  Created by Jose Neves on 08/02/18.
+//  Created by Jose Neves on 09/02/18.
 //  Copyright © 2018 Jose Neves. All rights reserved.
 //
 
 import UIKit
 
-class SetCoursesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    @IBOutlet weak var courseTableView: UITableView!
+class SetNotesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var maxTextField: UITextField!
+    @IBOutlet weak var noteTableView: UITableView!
     
-    private var period: Period!
-    private var courses = [String]()
+    private var notes = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.noteTableView.register(UINib(nibName: "NoteTableCell", bundle: nil), forCellReuseIdentifier: "noteTableCell")
+        
         self.addDelegate()
     }
     
-    @IBAction func nextScreenAction(_ sender: Any) {
-        self.performSegue(withIdentifier: "noteID", sender: nil)
+    @IBAction func saveAction(_ sender: Any) {
+        if (self.notes.count > 0) {
+            self.performSegue(withIdentifier: "homeID", sender: nil)
+        }
+        else {
+            let alert = UIAlertController(title: "Ops...", message: "Acho que você tem pelo menos uma matéria, não?", preferredStyle: .alert)
+            
+            alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
-    func setPeriod(period: Period) -> Void {
-        self.period = period
+    @IBAction func addNoteAction(_ sender: Any) {
+        let noteName = self.nameTextField.text ?? ""
         
-        for i in 0..<period.courses {
-            self.courses.insert("Matéria \(i + 1)", at: Int(i))
+        if (noteName != "") {
+            self.notes.append(noteName)
+            self.noteTableView.reloadData()
         }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.courses.count
+        return self.notes.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,8 +65,8 @@ class SetCoursesViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "courseCell", for: indexPath)
-        cell.textLabel?.text = self.courses[indexPath.section]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "noteTableCell", for: indexPath) as! NoteTableViewCell
+        cell.evaluationLabel.text = self.notes[indexPath.section]
         cell.layer.cornerRadius = 10
         cell.layer.masksToBounds = true
         
@@ -70,28 +83,11 @@ class SetCoursesViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alert = UIAlertController(title: self.courses[indexPath.section], message: "Dê um nome para essa matéria", preferredStyle: UIAlertControllerStyle.alert)
         
-        let action = UIAlertAction(title: "Salvar", style: .default) { (alertAction) in
-            let textField = alert.textFields![0] as UITextField
-            let courseName = textField.text ?? ""
-            
-            if (courseName != "") {
-                self.courses[indexPath.section] = courseName
-                self.courseTableView.reloadData()
-            }
-        }
-        
-        alert.addTextField { (textField) in
-            textField.placeholder = "Digite o nome da matéria"
-        }
-        alert.addAction(action)
-        
-        self.present(alert, animated: true, completion: nil)
     }
     
     private func addDelegate() -> Void {
-        self.courseTableView.delegate = self
-        self.courseTableView.dataSource = self
+        self.noteTableView.delegate = self
+        self.noteTableView.dataSource = self
     }
 }

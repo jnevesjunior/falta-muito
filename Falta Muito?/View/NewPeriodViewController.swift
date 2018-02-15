@@ -23,7 +23,17 @@ class NewPeriodViewController: UIViewController {
         self.periodPresenter = PeriodPresenter()
     }
     
-    @IBAction func saveAction(_ sender: Any) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case "coursesID":
+            let viewController = segue.destination as! SetCoursesViewController
+            viewController.setPeriod(period: self.period)
+        default:
+            break
+        }
+    }
+    
+    @IBAction func nextScreenAction(_ sender: Any) {
         if (!self.isValidData()) {
             return
         }
@@ -60,7 +70,6 @@ class NewPeriodViewController: UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
             
         self.present(alert, animated: true, completion: nil)
     }

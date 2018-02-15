@@ -2,7 +2,7 @@
 //  Note+CoreDataProperties.swift
 //  Falta Muito?
 //
-//  Created by Jose Neves on 08/02/18.
+//  Created by Jose Neves on 09/02/18.
 //  Copyright © 2018 Jose Neves. All rights reserved.
 //
 //
@@ -17,8 +17,9 @@ extension Note {
         return NSFetchRequest<Note>(entityName: "Note")
     }
 
-    @NSManaged public var name: String?
     @NSManaged public var max: Double
+    @NSManaged public var name: String?
+    @NSManaged public var weight: Double
     @NSManaged public var course: Course?
 
 }
