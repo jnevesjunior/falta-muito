@@ -94,8 +94,8 @@
 			children = (
 				2DA51F082019613F00ED6B3F /* TableCell */,
 				2DA51F0B2019623300ED6B3F /* TableViewCell */,
-				2DA51F052019588000ED6B3F /* PeriodViewController.swift */,
 				2DB0AC9A202B3F8600785509 /* NewPeriodViewController.swift */,
+				2DA51F052019588000ED6B3F /* PeriodViewController.swift */,
 				2D556E55202D1F8100A3DF8D /* SetCoursesViewController.swift */,
 				2D556E57202DFA1400A3DF8D /* SetNotesViewController.swift */,
 			);

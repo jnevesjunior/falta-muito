@@ -46,7 +46,28 @@ class SetNotesViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.notes.count
+        let lines = self.notes.count
+        var backgroundView = UIView()
+        
+        if (lines == 0) {
+            let message = UILabel()
+            message.textColor = UIColor.darkGray
+            message.text = """
+            Clique em add para cadastrar como você é avaliado(a) ex:
+            
+            Avaliação Intermediária
+            Avaliação Continuada
+            Avaliação Semestral
+            """
+            message.textAlignment = .center
+            message.numberOfLines = 7
+            
+            backgroundView = message
+        }
+        
+        self.noteTableView.backgroundView = backgroundView
+        
+        return lines
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

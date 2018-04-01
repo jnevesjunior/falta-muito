@@ -40,7 +40,22 @@ class PeriodViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return self.periods.count
+        let lines = self.periods.count
+        var backgroundView = UIView()
+        
+        if (lines == 0) {
+            let message = UILabel()
+            message.textColor = UIColor.darkGray
+            message.text = "Clique em + para cadastrar um novo período =)"
+            message.textAlignment = .center
+            message.numberOfLines = 2
+            
+            backgroundView = message
+        }
+        
+        self.periodTableView.backgroundView = backgroundView
+        
+        return lines
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
