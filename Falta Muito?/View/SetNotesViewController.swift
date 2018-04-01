@@ -53,7 +53,7 @@ class SetNotesViewController: UIViewController, UITableViewDataSource, UITableVi
             let message = UILabel()
             message.textColor = UIColor.darkGray
             message.text = """
-            Clique em add para cadastrar como você é avaliado(a) ex:
+            Clique em + para cadastrar como você é avaliado(a) ex:
             
             Avaliação Intermediária
             Avaliação Continuada
