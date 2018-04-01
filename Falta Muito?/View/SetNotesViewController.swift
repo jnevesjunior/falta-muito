@@ -96,6 +96,8 @@ class SetNotesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let closeAction = UIContextualAction(style: .destructive, title:  "❌", handler: { (ac: UIContextualAction, view: UIView, success) in
+            self.notes.remove(at: indexPath.section)
+            self.noteTableView.reloadData()
             success(true)
         })
         closeAction.backgroundColor = UIColor.white.withAlphaComponent(0.0)
