@@ -11,7 +11,7 @@ import UIKit
 class SetCoursesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var courseTableView: UITableView!
     
-    private var period: Period!
+    private var period = [String: Any]()
     private var courses = [String]()
     
     override func viewDidLoad() {
@@ -20,15 +20,28 @@ class SetCoursesViewController: UIViewController, UITableViewDataSource, UITable
         self.addDelegate()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case "noteID":
+            let viewController = segue.destination as! SetNotesViewController
+            viewController.setPeriod(period: self.period)
+            viewController.setCourses(courses: self.courses)
+        default:
+            break
+        }
+    }
+    
     @IBAction func nextScreenAction(_ sender: Any) {
         self.performSegue(withIdentifier: "noteID", sender: nil)
     }
     
-    func setPeriod(period: Period) -> Void {
+    func setPeriod(period: [String: Any]) -> Void {
         self.period = period
         
-        for i in 0..<period.courses {
-            self.courses.insert("Matéria \(i + 1)", at: Int(i))
+        if let courses = period["courses"] as? Int {
+            for i in 0..<courses {
+                self.courses.insert("Matéria \(i + 1)", at: Int(i))
+            }
         }
     }
     

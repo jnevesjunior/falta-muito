@@ -20,5 +20,18 @@ extension Course {
     @NSManaged public var name: String?
     @NSManaged public var notes: Int16
     @NSManaged public var period: Period?
-
+    
+    public func createEntity(array: [String: AnyObject]) -> Course? {
+        let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
+        
+        if let entity = NSEntityDescription.insertNewObject(forEntityName: "Course", into: context) as? Course {
+            entity.name = array["name"] as? String
+            entity.notes = (array["notes"] as? Int16)!
+            entity.period = array["period"] as? Period
+            return entity
+        }
+        else {
+            return nil
+        }
+    }
 }

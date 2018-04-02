@@ -13,11 +13,15 @@ class SetNotesViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var maxTextField: UITextField!
     @IBOutlet weak var noteTableView: UITableView!
     
+    private var period = [String: Any]()
+    private var courses = [String]()
     private var notes = [String]()
+    private var periodPresenter: PeriodPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.periodPresenter = PeriodPresenter()
         self.noteTableView.register(UINib(nibName: "NoteTableCell", bundle: nil), forCellReuseIdentifier: "noteTableCell")
         
         self.addDelegate()
@@ -25,6 +29,7 @@ class SetNotesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBAction func saveAction(_ sender: Any) {
         if (self.notes.count > 0) {
+            let period = self.periodPresenter.savePeriod(period: self.period)
             self.performSegue(withIdentifier: "homeID", sender: nil)
         }
         else {
@@ -43,6 +48,14 @@ class SetNotesViewController: UIViewController, UITableViewDataSource, UITableVi
             self.notes.append(noteName)
             self.noteTableView.reloadData()
         }
+    }
+    
+    func setPeriod(period: [String: Any]) -> Void {
+        self.period = period
+    }
+    
+    func setCourses(courses: [String]) -> Void {
+        self.courses = courses
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
