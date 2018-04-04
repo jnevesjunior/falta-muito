@@ -11,17 +11,22 @@ import UIKit
 class SetNotesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var maxTextField: UITextField!
+    @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var noteTableView: UITableView!
     
     private var period = [String: Any]()
     private var courses = [String]()
-    private var notes = [String]()
+    private var notes = [[String: Any]]()
     private var periodPresenter: PeriodPresenter!
+    private var coursePresenter: CoursePresenter!
+    private var notePresenter: NotePresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.periodPresenter = PeriodPresenter()
+        self.coursePresenter = CoursePresenter()
+        self.notePresenter = NotePresenter()
         self.noteTableView.register(UINib(nibName: "NoteTableCell", bundle: nil), forCellReuseIdentifier: "noteTableCell")
         
         self.addDelegate()
@@ -29,7 +34,9 @@ class SetNotesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBAction func saveAction(_ sender: Any) {
         if (self.notes.count > 0) {
-            let period = self.periodPresenter.savePeriod(period: self.period)
+            let periodEntity = self.periodPresenter.savePeriod(period: self.period)
+            let courses = self.coursePresenter.saveCourses(courses: self.courses, period: periodEntity)
+            _ = self.notePresenter.saveNotes(notes: self.notes, courses: courses)
             self.performSegue(withIdentifier: "homeID", sender: nil)
         }
         else {
@@ -43,9 +50,16 @@ class SetNotesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBAction func addNoteAction(_ sender: Any) {
         let noteName = self.nameTextField.text ?? ""
+        let maxNote = Int(self.maxTextField.text ?? "") ?? 0
+        let noteWeight = Int(self.weightTextField.text ?? "") ?? 0
         
-        if (noteName != "") {
-            self.notes.append(noteName)
+        if (noteName != "" && maxNote > 0 && noteWeight > 0) {
+            var noteArray = [String: Any]()
+            noteArray["name"] = noteName
+            noteArray["max"] = maxNote
+            noteArray["weight"] = noteWeight
+            
+            self.notes.append(noteArray)
             self.noteTableView.reloadData()
         }
     }
@@ -100,7 +114,9 @@ class SetNotesViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "noteTableCell", for: indexPath) as! NoteTableViewCell
-        cell.evaluationLabel.text = self.notes[indexPath.section]
+        if let noteName = self.notes[indexPath.section]["name"] as? String {
+            cell.evaluationLabel.text = noteName
+        }
         cell.layer.cornerRadius = 10
         cell.layer.masksToBounds = true
         

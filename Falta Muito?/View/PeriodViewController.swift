@@ -15,6 +15,7 @@ class PeriodViewController: UIViewController, UITableViewDataSource, UITableView
     private var periodPresenter: PeriodPresenter!
     
     private var periods = [Period]()
+    private var selectedPeriod: Period?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,18 @@ class PeriodViewController: UIViewController, UITableViewDataSource, UITableView
         
         self.addDelegate()
         self.getPeriods()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case "courseID":
+            if let period = self.selectedPeriod {
+                let viewController = segue.destination as! CoursesViewController
+                viewController.setPeriod(period: period)
+            }
+        default:
+            break
+        }
     }
     
     @IBAction func createAction(_ sender: Any) {
@@ -91,6 +104,7 @@ class PeriodViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedPeriod = self.periods[indexPath.section]
         self.performSegue(withIdentifier: "courseID", sender: nil)
     }
     

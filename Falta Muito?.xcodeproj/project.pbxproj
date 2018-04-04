@@ -16,10 +16,17 @@
 		2D556E58202DFA1400A3DF8D /* SetNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D556E57202DFA1400A3DF8D /* SetNotesViewController.swift */; };
 		2D556E5A202E014900A3DF8D /* NoteTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D556E59202E014900A3DF8D /* NoteTableCell.xib */; };
 		2D556E5C202E024F00A3DF8D /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D556E5B202E024F00A3DF8D /* NoteTableViewCell.swift */; };
+		2D5BE1BC2072659F0094A6DC /* NotePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5BE1BB2072659F0094A6DC /* NotePresenter.swift */; };
+		2D5BE1BE207281B70094A6DC /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5BE1BD207281B70094A6DC /* CoursesViewController.swift */; };
+		2D5BE1C0207284060094A6DC /* CourseTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D5BE1BF207284060094A6DC /* CourseTableCell.xib */; };
+		2D5BE1C2207284480094A6DC /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5BE1C1207284480094A6DC /* CourseTableViewCell.swift */; };
 		2D955024202CA693001BF93F /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D955020202CA693001BF93F /* Note+CoreDataClass.swift */; };
 		2D955025202CA693001BF93F /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D955021202CA693001BF93F /* Note+CoreDataProperties.swift */; };
 		2D955026202CA693001BF93F /* Course+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D955022202CA693001BF93F /* Course+CoreDataClass.swift */; };
 		2D955027202CA693001BF93F /* Course+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D955023202CA693001BF93F /* Course+CoreDataProperties.swift */; };
+		2DA0B329207522FF002CEBE8 /* NoteDetailTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA0B328207522FF002CEBE8 /* NoteDetailTableCell.xib */; };
+		2DA0B32B207523C0002CEBE8 /* NoteDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA0B32A207523C0002CEBE8 /* NoteDetailTableViewCell.swift */; };
+		2DA0B32D20752492002CEBE8 /* CourseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA0B32C20752492002CEBE8 /* CourseDetailViewController.swift */; };
 		2DA51F062019588000ED6B3F /* PeriodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA51F052019588000ED6B3F /* PeriodViewController.swift */; };
 		2DA51F0A2019615200ED6B3F /* PeriodTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DA51F092019615200ED6B3F /* PeriodTableCell.xib */; };
 		2DA51F0D2019624900ED6B3F /* PeriodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA51F0C2019624900ED6B3F /* PeriodTableViewCell.swift */; };
@@ -43,10 +50,17 @@
 		2D556E57202DFA1400A3DF8D /* SetNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNotesViewController.swift; sourceTree = "<group>"; };
 		2D556E59202E014900A3DF8D /* NoteTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTableCell.xib; sourceTree = "<group>"; };
 		2D556E5B202E024F00A3DF8D /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		2D5BE1BB2072659F0094A6DC /* NotePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePresenter.swift; sourceTree = "<group>"; };
+		2D5BE1BD207281B70094A6DC /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
+		2D5BE1BF207284060094A6DC /* CourseTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseTableCell.xib; sourceTree = "<group>"; };
+		2D5BE1C1207284480094A6DC /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		2D955020202CA693001BF93F /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2D955021202CA693001BF93F /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2D955022202CA693001BF93F /* Course+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2D955023202CA693001BF93F /* Course+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2DA0B328207522FF002CEBE8 /* NoteDetailTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteDetailTableCell.xib; sourceTree = "<group>"; };
+		2DA0B32A207523C0002CEBE8 /* NoteDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailTableViewCell.swift; sourceTree = "<group>"; };
+		2DA0B32C20752492002CEBE8 /* CourseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailViewController.swift; sourceTree = "<group>"; };
 		2DA51F052019588000ED6B3F /* PeriodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodViewController.swift; sourceTree = "<group>"; };
 		2DA51F072019609000ED6B3F /* Falta Muito?.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Falta Muito?.entitlements"; sourceTree = "<group>"; };
 		2DA51F092019615200ED6B3F /* PeriodTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PeriodTableCell.xib; sourceTree = "<group>"; };
@@ -88,6 +102,7 @@
 			children = (
 				2D4563FF202B7B8A00A25235 /* PeriodPresenter.swift */,
 				2DEC84882071BA4F0004B55E /* CoursePresenter.swift */,
+				2D5BE1BB2072659F0094A6DC /* NotePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -98,6 +113,8 @@
 				2DA51F082019613F00ED6B3F /* TableCell */,
 				2DA51F0B2019623300ED6B3F /* TableViewCell */,
 				2DB0AC9A202B3F8600785509 /* NewPeriodViewController.swift */,
+				2D5BE1BD207281B70094A6DC /* CoursesViewController.swift */,
+				2DA0B32C20752492002CEBE8 /* CourseDetailViewController.swift */,
 				2DA51F052019588000ED6B3F /* PeriodViewController.swift */,
 				2D556E55202D1F8100A3DF8D /* SetCoursesViewController.swift */,
 				2D556E57202DFA1400A3DF8D /* SetNotesViewController.swift */,
@@ -109,7 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				2DA51F092019615200ED6B3F /* PeriodTableCell.xib */,
+				2D5BE1BF207284060094A6DC /* CourseTableCell.xib */,
 				2D556E59202E014900A3DF8D /* NoteTableCell.xib */,
+				2DA0B328207522FF002CEBE8 /* NoteDetailTableCell.xib */,
 			);
 			path = TableCell;
 			sourceTree = "<group>";
@@ -118,7 +137,9 @@
 			isa = PBXGroup;
 			children = (
 				2DA51F0C2019624900ED6B3F /* PeriodTableViewCell.swift */,
+				2D5BE1C1207284480094A6DC /* CourseTableViewCell.swift */,
 				2D556E5B202E024F00A3DF8D /* NoteTableViewCell.swift */,
+				2DA0B32A207523C0002CEBE8 /* NoteDetailTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -198,7 +219,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Jose Neves";
 				TargetAttributes = {
 					2DD0A6BD200D315800B18E07 = {
@@ -238,6 +259,8 @@
 				2DD0A6CF200D315800B18E07 /* LaunchScreen.storyboard in Resources */,
 				2DD0A6CC200D315800B18E07 /* Assets.xcassets in Resources */,
 				2D556E5A202E014900A3DF8D /* NoteTableCell.xib in Resources */,
+				2D5BE1C0207284060094A6DC /* CourseTableCell.xib in Resources */,
+				2DA0B329207522FF002CEBE8 /* NoteDetailTableCell.xib in Resources */,
 				2DD0A6C7200D315800B18E07 /* Main.storyboard in Resources */,
 				2DA51F0A2019615200ED6B3F /* PeriodTableCell.xib in Resources */,
 			);
@@ -250,14 +273,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D5BE1BC2072659F0094A6DC /* NotePresenter.swift in Sources */,
 				2D4563F8202B785300A25235 /* Period+CoreDataProperties.swift in Sources */,
 				2D955027202CA693001BF93F /* Course+CoreDataProperties.swift in Sources */,
 				2DD0A6C4200D315800B18E07 /* ViewController.swift in Sources */,
+				2DA0B32D20752492002CEBE8 /* CourseDetailViewController.swift in Sources */,
 				2D4563FD202B79C400A25235 /* CoreDataService.swift in Sources */,
 				2D955025202CA693001BF93F /* Note+CoreDataProperties.swift in Sources */,
+				2DA0B32B207523C0002CEBE8 /* NoteDetailTableViewCell.swift in Sources */,
 				2D556E5C202E024F00A3DF8D /* NoteTableViewCell.swift in Sources */,
 				2DD0A6C2200D315800B18E07 /* AppDelegate.swift in Sources */,
+				2D5BE1BE207281B70094A6DC /* CoursesViewController.swift in Sources */,
 				2D456400202B7B8A00A25235 /* PeriodPresenter.swift in Sources */,
+				2D5BE1C2207284480094A6DC /* CourseTableViewCell.swift in Sources */,
 				2D4563FB202B793F00A25235 /* CoreDataStack.swift in Sources */,
 				2D556E56202D1F8100A3DF8D /* SetCoursesViewController.swift in Sources */,
 				2DB0AC9B202B3F8600785509 /* NewPeriodViewController.swift in Sources */,
@@ -308,6 +336,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -315,6 +344,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -365,6 +395,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -372,6 +403,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

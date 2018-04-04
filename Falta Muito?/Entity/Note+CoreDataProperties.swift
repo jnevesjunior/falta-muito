@@ -22,4 +22,18 @@ extension Note {
     @NSManaged public var weight: Double
     @NSManaged public var course: Course?
 
+    public func createEntity(array: [String: AnyObject]) -> Note? {
+        let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
+        
+        if let entity = NSEntityDescription.insertNewObject(forEntityName: "Note", into: context) as? Note {
+            entity.name = array["name"] as? String
+            entity.max = (array["max"] as? Double)!
+            entity.weight = (array["weight"] as? Double)!
+            entity.course = array["course"] as? Course
+            return entity
+        }
+        else {
+            return nil
+        }
+    }
 }

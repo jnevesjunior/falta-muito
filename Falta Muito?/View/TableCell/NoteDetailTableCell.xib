@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="noteDetailTableCell" id="2re-Jv-gQ1" customClass="NoteDetailTableViewCell" customModule="Falta_Muito_" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="85"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2re-Jv-gQ1" id="Qb5-Sd-WWY">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matéria 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnw-fx-upV">
+                        <rect key="frame" x="32" y="11" width="311" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="30w-yV-fqE"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BGw-mg-P5k">
+                        <rect key="frame" x="32" y="44" width="311" height="30"/>
+                        <color key="tintColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="PwT-5J-ooT"/>
+                        </constraints>
+                        <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </progressView>
+                </subviews>
+                <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="hnw-fx-upV" firstAttribute="top" secondItem="Qb5-Sd-WWY" secondAttribute="topMargin" id="8gB-gU-IIj"/>
+                    <constraint firstItem="hnw-fx-upV" firstAttribute="leading" secondItem="Qb5-Sd-WWY" secondAttribute="leadingMargin" constant="16" id="ZrV-zM-qiw"/>
+                    <constraint firstItem="BGw-mg-P5k" firstAttribute="bottom" secondItem="Qb5-Sd-WWY" secondAttribute="bottomMargin" id="aQF-G1-x5g"/>
+                    <constraint firstItem="BGw-mg-P5k" firstAttribute="leading" secondItem="Qb5-Sd-WWY" secondAttribute="leadingMargin" constant="16" id="mtD-du-uYD"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="BGw-mg-P5k" secondAttribute="trailing" constant="16" id="wdO-eG-1Yz"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="hnw-fx-upV" secondAttribute="trailing" constant="16" id="xny-4H-gO8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="hnw-fx-upV" id="itk-Bm-3oq"/>
+                <outlet property="noteProgressView" destination="BGw-mg-P5k" id="nzQ-3L-xC2"/>
+            </connections>
+            <point key="canvasLocation" x="-42" y="8"/>
+        </tableViewCell>
+    </objects>
+</document>
