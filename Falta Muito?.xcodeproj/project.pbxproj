@@ -20,6 +20,8 @@
 		2D5BE1BE207281B70094A6DC /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5BE1BD207281B70094A6DC /* CoursesViewController.swift */; };
 		2D5BE1C0207284060094A6DC /* CourseTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D5BE1BF207284060094A6DC /* CourseTableCell.xib */; };
 		2D5BE1C2207284480094A6DC /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5BE1C1207284480094A6DC /* CourseTableViewCell.swift */; };
+		2D6E9EE8207AF11C00A9759F /* NoteTemplate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E9EE6207AF11C00A9759F /* NoteTemplate+CoreDataClass.swift */; };
+		2D6E9EE9207AF11C00A9759F /* NoteTemplate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E9EE7207AF11C00A9759F /* NoteTemplate+CoreDataProperties.swift */; };
 		2D955024202CA693001BF93F /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D955020202CA693001BF93F /* Note+CoreDataClass.swift */; };
 		2D955025202CA693001BF93F /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D955021202CA693001BF93F /* Note+CoreDataProperties.swift */; };
 		2D955026202CA693001BF93F /* Course+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D955022202CA693001BF93F /* Course+CoreDataClass.swift */; };
@@ -54,6 +56,8 @@
 		2D5BE1BD207281B70094A6DC /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		2D5BE1BF207284060094A6DC /* CourseTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CourseTableCell.xib; sourceTree = "<group>"; };
 		2D5BE1C1207284480094A6DC /* CourseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
+		2D6E9EE6207AF11C00A9759F /* NoteTemplate+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteTemplate+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2D6E9EE7207AF11C00A9759F /* NoteTemplate+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteTemplate+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2D955020202CA693001BF93F /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2D955021202CA693001BF93F /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2D955022202CA693001BF93F /* Course+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 		2DB0AC9C202B463D00785509 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				2D6E9EE6207AF11C00A9759F /* NoteTemplate+CoreDataClass.swift */,
+				2D6E9EE7207AF11C00A9759F /* NoteTemplate+CoreDataProperties.swift */,
 				2D955020202CA693001BF93F /* Note+CoreDataClass.swift */,
 				2D955021202CA693001BF93F /* Note+CoreDataProperties.swift */,
 				2D955022202CA693001BF93F /* Course+CoreDataClass.swift */,
@@ -280,6 +286,7 @@
 				2DA0B32D20752492002CEBE8 /* CourseDetailViewController.swift in Sources */,
 				2D4563FD202B79C400A25235 /* CoreDataService.swift in Sources */,
 				2D955025202CA693001BF93F /* Note+CoreDataProperties.swift in Sources */,
+				2D6E9EE8207AF11C00A9759F /* NoteTemplate+CoreDataClass.swift in Sources */,
 				2DA0B32B207523C0002CEBE8 /* NoteDetailTableViewCell.swift in Sources */,
 				2D556E5C202E024F00A3DF8D /* NoteTableViewCell.swift in Sources */,
 				2DD0A6C2200D315800B18E07 /* AppDelegate.swift in Sources */,
@@ -293,6 +300,7 @@
 				2D556E58202DFA1400A3DF8D /* SetNotesViewController.swift in Sources */,
 				2DD0A6CA200D315800B18E07 /* Falta_Muito.xcdatamodeld in Sources */,
 				2DA51F062019588000ED6B3F /* PeriodViewController.swift in Sources */,
+				2D6E9EE9207AF11C00A9759F /* NoteTemplate+CoreDataProperties.swift in Sources */,
 				2DEC84892071BA4F0004B55E /* CoursePresenter.swift in Sources */,
 				2D955024202CA693001BF93F /* Note+CoreDataClass.swift in Sources */,
 				2D4563F7202B785300A25235 /* Period+CoreDataClass.swift in Sources */,

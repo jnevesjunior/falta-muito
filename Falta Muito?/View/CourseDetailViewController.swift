@@ -59,7 +59,8 @@ class CourseDetailViewController: UIViewController, UITableViewDataSource, UITab
         let note = self.notes[indexPath.section]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "noteDetailTableCell", for: indexPath) as! NoteDetailTableViewCell
-        cell.nameLabel.text = note.name
+        cell.nameLabel.text = note.noteTemplate?.name
+        cell.noteProgressView.setProgress(self.notePresenter.getProgress(note: note), animated: true)
         
         return cell
     }

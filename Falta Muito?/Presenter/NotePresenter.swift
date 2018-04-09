@@ -40,4 +40,10 @@ class NotePresenter {
         
         return notesObj
     }
+    
+    func getProgress(note: Note) -> Float {
+        let progress = (note.noteTemplate?.weight)!/(note.noteTemplate?.max)!
+        
+        return Float(progress)
+    }
 }

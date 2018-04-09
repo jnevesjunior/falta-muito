@@ -5,10 +5,14 @@
         <relationship name="period" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Period" syncable="YES"/>
     </entity>
     <entity name="Note" representedClassName=".Note" syncable="YES">
+        <attribute name="value" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" syncable="YES"/>
+        <relationship name="noteTemplate" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NoteTemplate" syncable="YES"/>
+    </entity>
+    <entity name="NoteTemplate" representedClassName=".NoteTemplate" syncable="YES">
         <attribute name="max" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="weight" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" syncable="YES"/>
     </entity>
     <entity name="Period" representedClassName=".Period" syncable="YES">
         <attribute name="averageNote" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -18,7 +22,8 @@
     </entity>
     <elements>
         <element name="Course" positionX="-36" positionY="-115" width="128" height="73"/>
-        <element name="Note" positionX="126" positionY="-108" width="128" height="103"/>
+        <element name="Note" positionX="126" positionY="-108" width="128" height="90"/>
         <element name="Period" positionX="-225" positionY="-132" width="128" height="103"/>
+        <element name="NoteTemplate" positionX="-45" positionY="-81" width="128" height="90"/>
     </elements>
 </model>
