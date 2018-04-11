@@ -1,5 +1,5 @@
 //
-//  SetNotesViewController.swift
+//  CreateNoteTemplateViewController.swift
 //  Falta Muito?
 //
 //  Created by Jose Neves on 09/02/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetNotesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class CreateNoteTemplateViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var maxTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
@@ -36,7 +36,7 @@ class SetNotesViewController: UIViewController, UITableViewDataSource, UITableVi
         if (self.notes.count > 0) {
             let periodEntity = self.periodPresenter.savePeriod(period: self.period)
             let courses = self.coursePresenter.saveCourses(courses: self.courses, period: periodEntity)
-            _ = self.notePresenter.saveNotes(notes: self.notes, courses: courses)
+//            _ = self.notePresenter.saveNotes(notes: self.notes, courses: courses)
             self.performSegue(withIdentifier: "homeID", sender: nil)
         }
         else {

@@ -16,5 +16,6 @@ class CourseTableViewCell: UITableViewCell {
         
         self.layer.cornerRadius = 5
         self.layer.masksToBounds = true
+        self.selectionStyle = .none
     }
 }

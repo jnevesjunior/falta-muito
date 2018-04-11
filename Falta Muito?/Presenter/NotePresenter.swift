@@ -26,23 +26,26 @@ class NotePresenter {
         }
     }
     
-    func saveNotes(notes: [[String: Any]], courses: [Course]) -> [Note] {
+    func saveNotes(noteTemplates: [NoteTemplate], courses: [Course]) -> [Note] {
         var notesObj = [Note]()
+        var noteArray = [String: Any]()
         
-        for note in notes {
-            var noteArray = note
+        for course in courses {
+            noteArray["value"] = 0
+            noteArray["course"] = course
             
-            for course in courses {
-                noteArray["course"] = course
+            for noteTemplate in noteTemplates {
+                noteArray["noteTemplate"] = noteTemplate
                 notesObj.append(Note().createEntity(array: noteArray as [String: AnyObject])!)
             }
         }
+        CoreDataService().saveData()
         
         return notesObj
     }
     
     func getProgress(note: Note) -> Float {
-        let progress = (note.noteTemplate?.weight)!/(note.noteTemplate?.max)!
+        let progress = note.value/(note.noteTemplate?.max)!
         
         return Float(progress)
     }

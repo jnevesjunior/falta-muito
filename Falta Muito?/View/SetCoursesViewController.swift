@@ -22,8 +22,8 @@ class SetCoursesViewController: UIViewController, UITableViewDataSource, UITable
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
-        case "noteID":
-            let viewController = segue.destination as! SetNotesViewController
+        case "noteTemplateID":
+            let viewController = segue.destination as! SetNoteTemplateViewController
             viewController.setPeriod(period: self.period)
             viewController.setCourses(courses: self.courses)
         default:
@@ -32,7 +32,7 @@ class SetCoursesViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     @IBAction func nextScreenAction(_ sender: Any) {
-        self.performSegue(withIdentifier: "noteID", sender: nil)
+        self.performSegue(withIdentifier: "noteTemplateID", sender: nil)
     }
     
     func setPeriod(period: [String: Any]) -> Void {
@@ -69,6 +69,7 @@ class SetCoursesViewController: UIViewController, UITableViewDataSource, UITable
         cell.textLabel?.text = self.courses[indexPath.section]
         cell.layer.cornerRadius = 10
         cell.layer.masksToBounds = true
+        cell.selectionStyle = .none
         
         return cell
     }

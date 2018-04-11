@@ -16,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        self.loadDefaultData()
+        
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        print(urls[urls.count-1] as URL)
+        
         return true
     }
 
@@ -43,6 +47,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         CoreDataService().saveData()
+    }
+    
+    private func loadDefaultData() {
+        if(!self.isAppAlreadyLaunchedOnce()) {
+            let noteTemplatePresenter = NoteTemplatePresenter()
+            
+            var noteTempletes = [[String: Any]]()
+            
+            var noteTemplate1 = [String: Any]()
+            noteTemplate1["name"] = "Avaliação Continuada"
+            noteTemplate1["max"] = 10
+            noteTemplate1["weight"] = 7
+            noteTempletes.append(noteTemplate1)
+            
+            var noteTemplate2 = [String: Any]()
+            noteTemplate2["name"] = "Avaliação Intermediaria"
+            noteTemplate2["max"] = 10
+            noteTemplate2["weight"] = 7
+            noteTempletes.append(noteTemplate2)
+            
+            var noteTemplate3 = [String: Any]()
+            noteTemplate3["name"] = "Avaliação Semestral"
+            noteTemplate3["max"] = 10
+            noteTemplate3["weight"] = 7
+            noteTempletes.append(noteTemplate3)
+            
+            
+            _ = noteTemplatePresenter.saveNoteTemplates(noteTemplates: noteTempletes)
+        }
+        
+    }
+    
+    private func isAppAlreadyLaunchedOnce() -> Bool {
+        let defaults = UserDefaults.standard
+        
+        if (defaults.bool(forKey: "isAppAlreadyLaunchedOnce")) {
+            return true
+        } else {
+            defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
+            return false
+        }
     }
 
 }

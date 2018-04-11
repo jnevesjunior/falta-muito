@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D167777207BD66300C099F6 /* NoteTemplatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D167776207BD66300C099F6 /* NoteTemplatePresenter.swift */; };
+		2D1C53CD207CFD84006C2816 /* SetNoteTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1C53CC207CFD84006C2816 /* SetNoteTemplateViewController.swift */; };
+		2D1C53CF207D1D54006C2816 /* NoteTemplateTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D1C53CE207D1D54006C2816 /* NoteTemplateTableCell.xib */; };
+		2D1C53D1207D1F7F006C2816 /* NoteTemplateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1C53D0207D1F7F006C2816 /* NoteTemplateTableViewCell.swift */; };
 		2D4563F7202B785300A25235 /* Period+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4563F5202B785300A25235 /* Period+CoreDataClass.swift */; };
 		2D4563F8202B785300A25235 /* Period+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4563F6202B785300A25235 /* Period+CoreDataProperties.swift */; };
 		2D4563FB202B793F00A25235 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4563FA202B793F00A25235 /* CoreDataStack.swift */; };
 		2D4563FD202B79C400A25235 /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4563FC202B79C400A25235 /* CoreDataService.swift */; };
 		2D456400202B7B8A00A25235 /* PeriodPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4563FF202B7B8A00A25235 /* PeriodPresenter.swift */; };
 		2D556E56202D1F8100A3DF8D /* SetCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D556E55202D1F8100A3DF8D /* SetCoursesViewController.swift */; };
-		2D556E58202DFA1400A3DF8D /* SetNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D556E57202DFA1400A3DF8D /* SetNotesViewController.swift */; };
+		2D556E58202DFA1400A3DF8D /* CreateNoteTemplateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D556E57202DFA1400A3DF8D /* CreateNoteTemplateViewController.swift */; };
 		2D556E5A202E014900A3DF8D /* NoteTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D556E59202E014900A3DF8D /* NoteTableCell.xib */; };
 		2D556E5C202E024F00A3DF8D /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D556E5B202E024F00A3DF8D /* NoteTableViewCell.swift */; };
 		2D5BE1BC2072659F0094A6DC /* NotePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5BE1BB2072659F0094A6DC /* NotePresenter.swift */; };
@@ -43,13 +47,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D167776207BD66300C099F6 /* NoteTemplatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTemplatePresenter.swift; sourceTree = "<group>"; };
+		2D1C53CC207CFD84006C2816 /* SetNoteTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNoteTemplateViewController.swift; sourceTree = "<group>"; };
+		2D1C53CE207D1D54006C2816 /* NoteTemplateTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTemplateTableCell.xib; sourceTree = "<group>"; };
+		2D1C53D0207D1F7F006C2816 /* NoteTemplateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTemplateTableViewCell.swift; sourceTree = "<group>"; };
 		2D4563F5202B785300A25235 /* Period+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Period+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2D4563F6202B785300A25235 /* Period+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Period+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2D4563FA202B793F00A25235 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		2D4563FC202B79C400A25235 /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		2D4563FF202B7B8A00A25235 /* PeriodPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodPresenter.swift; sourceTree = "<group>"; };
 		2D556E55202D1F8100A3DF8D /* SetCoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCoursesViewController.swift; sourceTree = "<group>"; };
-		2D556E57202DFA1400A3DF8D /* SetNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNotesViewController.swift; sourceTree = "<group>"; };
+		2D556E57202DFA1400A3DF8D /* CreateNoteTemplateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNoteTemplateViewController.swift; sourceTree = "<group>"; };
 		2D556E59202E014900A3DF8D /* NoteTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteTableCell.xib; sourceTree = "<group>"; };
 		2D556E5B202E024F00A3DF8D /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		2D5BE1BB2072659F0094A6DC /* NotePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePresenter.swift; sourceTree = "<group>"; };
@@ -107,6 +115,7 @@
 				2D4563FF202B7B8A00A25235 /* PeriodPresenter.swift */,
 				2DEC84882071BA4F0004B55E /* CoursePresenter.swift */,
 				2D5BE1BB2072659F0094A6DC /* NotePresenter.swift */,
+				2D167776207BD66300C099F6 /* NoteTemplatePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -121,7 +130,8 @@
 				2DA0B32C20752492002CEBE8 /* CourseDetailViewController.swift */,
 				2DA51F052019588000ED6B3F /* PeriodViewController.swift */,
 				2D556E55202D1F8100A3DF8D /* SetCoursesViewController.swift */,
-				2D556E57202DFA1400A3DF8D /* SetNotesViewController.swift */,
+				2D556E57202DFA1400A3DF8D /* CreateNoteTemplateViewController.swift */,
+				2D1C53CC207CFD84006C2816 /* SetNoteTemplateViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -133,6 +143,7 @@
 				2D5BE1BF207284060094A6DC /* CourseTableCell.xib */,
 				2D556E59202E014900A3DF8D /* NoteTableCell.xib */,
 				2DA0B328207522FF002CEBE8 /* NoteDetailTableCell.xib */,
+				2D1C53CE207D1D54006C2816 /* NoteTemplateTableCell.xib */,
 			);
 			path = TableCell;
 			sourceTree = "<group>";
@@ -144,6 +155,7 @@
 				2D5BE1C1207284480094A6DC /* CourseTableViewCell.swift */,
 				2D556E5B202E024F00A3DF8D /* NoteTableViewCell.swift */,
 				2DA0B32A207523C0002CEBE8 /* NoteDetailTableViewCell.swift */,
+				2D1C53D0207D1F7F006C2816 /* NoteTemplateTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -266,6 +278,7 @@
 				2DD0A6CC200D315800B18E07 /* Assets.xcassets in Resources */,
 				2D556E5A202E014900A3DF8D /* NoteTableCell.xib in Resources */,
 				2D5BE1C0207284060094A6DC /* CourseTableCell.xib in Resources */,
+				2D1C53CF207D1D54006C2816 /* NoteTemplateTableCell.xib in Resources */,
 				2DA0B329207522FF002CEBE8 /* NoteDetailTableCell.xib in Resources */,
 				2DD0A6C7200D315800B18E07 /* Main.storyboard in Resources */,
 				2DA51F0A2019615200ED6B3F /* PeriodTableCell.xib in Resources */,
@@ -282,11 +295,14 @@
 				2D5BE1BC2072659F0094A6DC /* NotePresenter.swift in Sources */,
 				2D4563F8202B785300A25235 /* Period+CoreDataProperties.swift in Sources */,
 				2D955027202CA693001BF93F /* Course+CoreDataProperties.swift in Sources */,
+				2D1C53CD207CFD84006C2816 /* SetNoteTemplateViewController.swift in Sources */,
 				2DD0A6C4200D315800B18E07 /* ViewController.swift in Sources */,
 				2DA0B32D20752492002CEBE8 /* CourseDetailViewController.swift in Sources */,
 				2D4563FD202B79C400A25235 /* CoreDataService.swift in Sources */,
 				2D955025202CA693001BF93F /* Note+CoreDataProperties.swift in Sources */,
+				2D167777207BD66300C099F6 /* NoteTemplatePresenter.swift in Sources */,
 				2D6E9EE8207AF11C00A9759F /* NoteTemplate+CoreDataClass.swift in Sources */,
+				2D1C53D1207D1F7F006C2816 /* NoteTemplateTableViewCell.swift in Sources */,
 				2DA0B32B207523C0002CEBE8 /* NoteDetailTableViewCell.swift in Sources */,
 				2D556E5C202E024F00A3DF8D /* NoteTableViewCell.swift in Sources */,
 				2DD0A6C2200D315800B18E07 /* AppDelegate.swift in Sources */,
@@ -297,7 +313,7 @@
 				2D556E56202D1F8100A3DF8D /* SetCoursesViewController.swift in Sources */,
 				2DB0AC9B202B3F8600785509 /* NewPeriodViewController.swift in Sources */,
 				2D955026202CA693001BF93F /* Course+CoreDataClass.swift in Sources */,
-				2D556E58202DFA1400A3DF8D /* SetNotesViewController.swift in Sources */,
+				2D556E58202DFA1400A3DF8D /* CreateNoteTemplateViewController.swift in Sources */,
 				2DD0A6CA200D315800B18E07 /* Falta_Muito.xcdatamodeld in Sources */,
 				2DA51F062019588000ED6B3F /* PeriodViewController.swift in Sources */,
 				2D6E9EE9207AF11C00A9759F /* NoteTemplate+CoreDataProperties.swift in Sources */,
@@ -380,7 +396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -433,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

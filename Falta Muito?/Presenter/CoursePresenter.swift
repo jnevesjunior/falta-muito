@@ -36,6 +36,8 @@ class CoursePresenter {
             
             coursesObj.append(Course().createEntity(array: courseArray)!)
         }
+        
+        CoreDataService().saveData()
         return coursesObj
     }
 }

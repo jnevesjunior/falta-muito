@@ -12,7 +12,7 @@ class CoreDataService {
     
     private var context = CoreDataStack.sharedInstance.persistentContainer.viewContext
     
-    public func saveData() {
+    func saveData() {
         do {
             try self.context.save()
         } catch let error {
@@ -20,7 +20,7 @@ class CoreDataService {
         }
     }
     
-    public func clearDataByEntity(entityName: String) {
+    func clearDataByEntity(entityName: String) {
         do {
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
             do {
@@ -33,7 +33,7 @@ class CoreDataService {
         }
     }
     
-    public func getDataByEntity(entityName: String, completion: @escaping ([Any]) -> Void) {
+    func getDataByEntity(entityName: String, completion: @escaping ([Any]) -> Void) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
         
         do {
@@ -42,6 +42,19 @@ class CoreDataService {
             return completion(results)
         } catch let error {
             print(error.localizedDescription)
+        }
+    }
+    
+    func deleteRow(object: NSManagedObject) {
+        do {
+            self.context.delete(object)
+            
+            do {
+                try self.context.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
+
         }
     }
 }

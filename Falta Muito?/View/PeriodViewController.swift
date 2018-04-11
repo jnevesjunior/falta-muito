@@ -97,6 +97,8 @@ class PeriodViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let closeAction = UIContextualAction(style: .destructive, title:  "❌", handler: { (ac: UIContextualAction, view: UIView, success) in
             success(true)
+            CoreDataService().deleteRow(object: self.periods[indexPath.section])
+            self.periodTableView.reloadData()
         })
         closeAction.backgroundColor = UIColor.white.withAlphaComponent(0.0)
         

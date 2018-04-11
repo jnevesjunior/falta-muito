@@ -61,8 +61,31 @@ class CourseDetailViewController: UIViewController, UITableViewDataSource, UITab
         let cell = tableView.dequeueReusableCell(withIdentifier: "noteDetailTableCell", for: indexPath) as! NoteDetailTableViewCell
         cell.nameLabel.text = note.noteTemplate?.name
         cell.noteProgressView.setProgress(self.notePresenter.getProgress(note: note), animated: true)
+        cell.isWarningMode(isWarningMode: note.value < (note.noteTemplate?.weight)!)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: self.notes[indexPath.section].noteTemplate?.name, message: "Quanto você tirou nessa avaliação?", preferredStyle: UIAlertControllerStyle.alert)
+        
+        let action = UIAlertAction(title: "Salvar", style: .default) { (alertAction) in
+            let textField = alert.textFields![0] as UITextField
+            let noteValue = textField.text ?? ""
+            
+            if (noteValue != "") {
+                self.notes[indexPath.section].value = Double(noteValue)!
+                self.noteDetailTableView.reloadData()
+                CoreDataService().saveData()
+            }
+        }
+        
+        alert.addTextField { (textField) in
+            textField.placeholder = "Digite a sua nota"
+        }
+        alert.addAction(action)
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
     private func addDelegate() {
