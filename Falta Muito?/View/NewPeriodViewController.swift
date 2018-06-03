@@ -23,6 +23,12 @@ class NewPeriodViewController: UIViewController {
         self.periodPresenter = PeriodPresenter()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        AnalyticsService().addTrackerToScreen(screenName: "New Period")
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
         case "coursesID":
@@ -41,7 +47,7 @@ class NewPeriodViewController: UIViewController {
         self.period["name"] = self.nameTextField.text ?? ""
         self.period["courses"] = Int(self.coursesTextField.text ?? "") ?? 0
         self.period["averageNote"] = Double(self.averageTextField.text ?? "") ?? 0
-        self.period["maxNote"] = Double(self.averageTextField.text ?? "") ?? 0
+        self.period["maxNote"] = Double(self.maxTextField.text ?? "") ?? 0
         
         self.performSegue(withIdentifier: "coursesID", sender: nil)
     }

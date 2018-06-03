@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreData
+import UserNotifications
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,9 +19,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.loadDefaultData()
+        self.setupGoogleAnalytics()
+        FirebaseApp.configure()
+        Messaging.messaging().delegate = self
         
-        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        print(urls[urls.count-1] as URL)
+        self.requestNotificationAuthorization(application: application)
+        application.registerForRemoteNotifications()
+        
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (greanted, error) in
+            if(error != nil) {
+            }
+        }
+        
+//        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+//        print(urls[urls.count-1] as URL)
         
         return true
     }
@@ -89,6 +103,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
     }
+    
+    private func setupGoogleAnalytics() {
+        var googleAnalyticsID = ""
+        var myDict: NSDictionary?
+        if let path = Bundle.main.path(forResource: "Settings", ofType: "plist") {
+            myDict = NSDictionary(contentsOfFile: path)
+        }
+        if let dict = myDict {
+            googleAnalyticsID = dict["GoogleAnalyticsID"] as! String
+        }
+        if let gai = GAI.sharedInstance() {
+            gai.tracker(withTrackingId: googleAnalyticsID)
+            
+            // Optional: automatically report uncaught exceptions.
+            gai.trackUncaughtExceptions = true
+            
+            // Optional: set Logger to VERBOSE for debug information.
+            // Remove before app release.
+            //            gai.logger.logLevel = .warning
+            gai.dispatchInterval = 2
+        }
+    }
+    
+    private func requestNotificationAuthorization(application: UIApplication) {
+        UNUserNotificationCenter.current().delegate = self
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(options: authOptions, completionHandler: {_, _ in })
+    }
 
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    public func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert, .badge, .sound])
+    }
+    
+    public func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        completionHandler()
+    }
+}
+
+extension AppDelegate: MessagingDelegate {
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+    }
+}

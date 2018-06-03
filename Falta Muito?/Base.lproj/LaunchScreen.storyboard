@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Falta Muito?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxn-pf-QXT">
-                                <rect key="frame" x="107.5" y="316" width="160" height="35"/>
+                                <rect key="frame" x="107.5" y="562" width="160" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="oGc-5O-h1D"/>
                                     <constraint firstAttribute="width" constant="160" id="ucH-B2-7bG"/>
@@ -27,11 +27,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-inverted" translatesAutoresizingMaskIntoConstraints="NO" id="GjL-3c-R9b">
+                                <rect key="frame" x="112.5" y="100" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="6Oe-sf-8LH"/>
+                                    <constraint firstAttribute="width" constant="150" id="evd-7N-VeC"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gxn-pf-QXT" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XKq-Y4-bZo"/>
-                            <constraint firstItem="gxn-pf-QXT" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="bvv-ge-Z7E"/>
+                            <constraint firstItem="GjL-3c-R9b" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bm0-RY-fbQ"/>
+                            <constraint firstItem="GjL-3c-R9b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="dHc-Tz-5qK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gxn-pf-QXT" secondAttribute="bottom" constant="70" id="oy8-Hf-f2r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -41,4 +50,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-inverted" width="341" height="341"/>
+    </resources>
 </document>

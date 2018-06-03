@@ -1,47 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="periodTableCell" rowHeight="50" id="tgj-tP-a43" customClass="PeriodTableViewCell" customModule="Falta_Muito_" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="periodTableCell" rowHeight="55" id="tgj-tP-a43" customClass="PeriodTableViewCell" customModule="Falta_Muito_" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tgj-tP-a43" id="NAW-ZS-NMI">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Period" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SRp-DG-RkT">
-                        <rect key="frame" x="16" y="13" width="312" height="24"/>
+                        <rect key="frame" x="16" y="13" width="302" height="34"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOd-WK-xQ7">
-                        <rect key="frame" x="338" y="14" width="21" height="21"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_keyboard_arrow_right_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="Ogk-yv-NLR">
+                        <rect key="frame" x="334" y="17.5" width="25" height="25"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="21" id="Cq9-FD-Byj"/>
-                            <constraint firstAttribute="height" constant="21" id="FPZ-rO-o82"/>
+                            <constraint firstAttribute="height" constant="25" id="0wA-yc-SKv"/>
+                            <constraint firstAttribute="width" constant="25" id="kJl-hG-DVp"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="mOd-WK-xQ7" firstAttribute="leading" secondItem="SRp-DG-RkT" secondAttribute="trailing" constant="10" id="Qji-st-nov"/>
+                    <constraint firstItem="Ogk-yv-NLR" firstAttribute="centerY" secondItem="NAW-ZS-NMI" secondAttribute="centerY" id="J74-Sb-5P2"/>
+                    <constraint firstItem="Ogk-yv-NLR" firstAttribute="leading" secondItem="SRp-DG-RkT" secondAttribute="trailing" constant="16" id="Xwc-4a-Uf9"/>
+                    <constraint firstAttribute="trailing" secondItem="Ogk-yv-NLR" secondAttribute="trailing" constant="16" id="dGW-Ji-eo5"/>
                     <constraint firstItem="SRp-DG-RkT" firstAttribute="top" secondItem="NAW-ZS-NMI" secondAttribute="topMargin" constant="2" id="dWD-NF-U7u"/>
                     <constraint firstAttribute="bottomMargin" secondItem="SRp-DG-RkT" secondAttribute="bottom" constant="2" id="lmf-HS-Zpa"/>
                     <constraint firstItem="SRp-DG-RkT" firstAttribute="leading" secondItem="NAW-ZS-NMI" secondAttribute="leadingMargin" id="qeO-gh-J1P"/>
-                    <constraint firstItem="mOd-WK-xQ7" firstAttribute="trailing" secondItem="NAW-ZS-NMI" secondAttribute="trailingMargin" id="rU3-zK-zCK"/>
-                    <constraint firstItem="mOd-WK-xQ7" firstAttribute="centerY" secondItem="NAW-ZS-NMI" secondAttribute="centerY" id="x9B-m9-kp7"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -50,4 +47,7 @@
             <point key="canvasLocation" x="25.5" y="61"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ic_keyboard_arrow_right_48pt" width="48" height="48"/>
+    </resources>
 </document>

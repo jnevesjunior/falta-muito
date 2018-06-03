@@ -31,6 +31,12 @@ class PeriodViewController: UIViewController, UITableViewDataSource, UITableView
         self.getPeriods()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        AnalyticsService().addTrackerToScreen(screenName: "Period")
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
         case "courseID":
@@ -98,7 +104,7 @@ class PeriodViewController: UIViewController, UITableViewDataSource, UITableView
         let closeAction = UIContextualAction(style: .destructive, title:  "❌", handler: { (ac: UIContextualAction, view: UIView, success) in
             success(true)
             CoreDataService().deleteRow(object: self.periods[indexPath.section])
-            self.periodTableView.reloadData()
+            self.getPeriods()
         })
         closeAction.backgroundColor = UIColor.white.withAlphaComponent(0.0)
         

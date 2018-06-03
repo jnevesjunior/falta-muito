@@ -22,7 +22,7 @@
     </entity>
     <elements>
         <element name="Course" positionX="-36" positionY="-115" width="128" height="58"/>
-        <element name="Note" positionX="126" positionY="-108" width="128" height="88"/>
+        <element name="Note" positionX="126" positionY="-108" width="128" height="90"/>
         <element name="NoteTemplate" positionX="-11" positionY="72" width="128" height="88"/>
         <element name="Period" positionX="-225" positionY="-132" width="128" height="103"/>
     </elements>

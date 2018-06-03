@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="courseTableCell" rowHeight="50" id="kB9-GA-lo9" customClass="CourseTableViewCell" customModule="Falta_Muito_" customModuleProvider="target">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="courseTableCell" rowHeight="55" id="kB9-GA-lo9" customClass="CourseTableViewCell" customModule="Falta_Muito_" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kB9-GA-lo9" id="cBh-fS-c5x">
@@ -19,28 +19,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ek8-q8-VNv">
-                        <rect key="frame" x="16" y="13" width="312" height="24"/>
+                        <rect key="frame" x="16" y="13" width="302" height="24"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6if-ca-esN">
-                        <rect key="frame" x="338" y="14" width="21" height="21"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_keyboard_arrow_right_48pt" translatesAutoresizingMaskIntoConstraints="NO" id="m4P-8u-9bc">
+                        <rect key="frame" x="334" y="12.5" width="25" height="25"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="21" id="MFi-6W-N4j"/>
-                            <constraint firstAttribute="width" constant="21" id="QRF-B9-f2B"/>
+                            <constraint firstAttribute="height" constant="25" id="ZN1-Be-Q4V"/>
+                            <constraint firstAttribute="width" constant="25" id="bbC-5V-nWd"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="Ek8-q8-VNv" secondAttribute="bottom" constant="2" id="1Ra-zn-ZM1"/>
-                    <constraint firstItem="6if-ca-esN" firstAttribute="trailing" secondItem="cBh-fS-c5x" secondAttribute="trailingMargin" id="AUE-nk-PFg"/>
+                    <constraint firstItem="m4P-8u-9bc" firstAttribute="centerY" secondItem="cBh-fS-c5x" secondAttribute="centerY" id="4ES-gn-S40"/>
                     <constraint firstItem="Ek8-q8-VNv" firstAttribute="leading" secondItem="cBh-fS-c5x" secondAttribute="leadingMargin" id="IGh-7x-1r4"/>
-                    <constraint firstItem="6if-ca-esN" firstAttribute="centerY" secondItem="cBh-fS-c5x" secondAttribute="centerY" id="JS5-0o-Qjz"/>
-                    <constraint firstItem="6if-ca-esN" firstAttribute="leading" secondItem="Ek8-q8-VNv" secondAttribute="trailing" constant="10" id="Vr3-oW-j3a"/>
+                    <constraint firstItem="m4P-8u-9bc" firstAttribute="leading" secondItem="Ek8-q8-VNv" secondAttribute="trailing" constant="16" id="IYL-th-43E"/>
+                    <constraint firstAttribute="trailing" secondItem="m4P-8u-9bc" secondAttribute="trailing" constant="16" id="Lto-3Y-oPZ"/>
                     <constraint firstItem="Ek8-q8-VNv" firstAttribute="top" secondItem="cBh-fS-c5x" secondAttribute="topMargin" constant="2" id="Xuj-h9-dX0"/>
                 </constraints>
             </tableViewCellContentView>
@@ -50,4 +47,7 @@
             <point key="canvasLocation" x="54" y="23"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="ic_keyboard_arrow_right_48pt" width="48" height="48"/>
+    </resources>
 </document>

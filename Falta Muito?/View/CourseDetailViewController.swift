@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import UICircularProgressRing
 
 class CourseDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var noteDetailTableView: UITableView!
+    @IBOutlet weak var weightCircularProgress: UICircularProgressRingView!
     
     private let refreshControl = UIRefreshControl()
     private var course: Course!
@@ -26,8 +28,16 @@ class CourseDetailViewController: UIViewController, UITableViewDataSource, UITab
         
         self.noteDetailTableView.register(UINib(nibName: "NoteDetailTableCell", bundle: nil), forCellReuseIdentifier: "noteDetailTableCell")
         
+        self.weightCircularProgress.maxValue = CGFloat((self.course.period?.maxNote)!)
+        
         self.addDelegate()
         self.getNotes()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        AnalyticsService().addTrackerToScreen(screenName: "Course Detail")
     }
     
     @objc private func refreshData(_ sender: Any) {
@@ -62,19 +72,22 @@ class CourseDetailViewController: UIViewController, UITableViewDataSource, UITab
         cell.nameLabel.text = note.noteTemplate?.name
         cell.noteProgressView.setProgress(self.notePresenter.getProgress(note: note), animated: true)
         cell.isWarningMode(isWarningMode: note.value < (note.noteTemplate?.weight)!)
+        cell.valueLabel.text = String(format: "%.2f", note.value)
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alert = UIAlertController(title: self.notes[indexPath.section].noteTemplate?.name, message: "Quanto você tirou nessa avaliação?", preferredStyle: UIAlertControllerStyle.alert)
+        let note = self.notes[indexPath.section]
+        let alert = UIAlertController(title: note.noteTemplate?.name, message: "Quanto você tirou nessa avaliação?", preferredStyle: UIAlertControllerStyle.alert)
         
         let action = UIAlertAction(title: "Salvar", style: .default) { (alertAction) in
             let textField = alert.textFields![0] as UITextField
-            let noteValue = textField.text ?? ""
+            let noteValue = Double(textField.text ?? "") ?? 0
             
-            if (noteValue != "") {
-                self.notes[indexPath.section].value = Double(noteValue)!
+            if (noteValue <= Double((self.course.period?.maxNote)!)) {
+                self.notes[indexPath.section].value = noteValue
+                self.calcWeight()
                 self.noteDetailTableView.reloadData()
                 CoreDataService().saveData()
             }
@@ -82,6 +95,8 @@ class CourseDetailViewController: UIViewController, UITableViewDataSource, UITab
         
         alert.addTextField { (textField) in
             textField.placeholder = "Digite a sua nota"
+            textField.keyboardType = .decimalPad
+            textField.text = "\(note.value)"
         }
         alert.addAction(action)
         
@@ -96,7 +111,28 @@ class CourseDetailViewController: UIViewController, UITableViewDataSource, UITab
     private func getNotes() {
         self.notePresenter.getNotes(course: self.course) { (notes) in
             self.notes = notes
+            self.calcWeight()
             self.noteDetailTableView.reloadData()
+        }
+    }
+    
+    private func calcWeight() {
+        var noteTotaly: Double = 0.0
+        
+        for note in self.notes {
+            noteTotaly += note.value
+        }
+        
+        self.setWeight(weight: noteTotaly/Double(self.notes.count))
+    }
+    
+    private func setWeight(weight: Double) {
+        self.weightCircularProgress.setProgress(to: CGFloat(weight), duration: 1.0)
+        
+        if (weight < (self.course.period?.averageNote)!) {
+            self.weightCircularProgress.innerRingColor = UIColor.red
+        } else {
+            self.weightCircularProgress.innerRingColor = UIColor(red: 1.0, green: 0.75, blue: 0.27, alpha: 1.0)
         }
     }
 }

@@ -20,6 +20,12 @@ class SetCoursesViewController: UIViewController, UITableViewDataSource, UITable
         self.addDelegate()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        AnalyticsService().addTrackerToScreen(screenName: "Set Courses")
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
         case "noteTemplateID":

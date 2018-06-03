@@ -27,20 +27,29 @@
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BGw-mg-P5k">
+                    <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BGw-mg-P5k">
                         <rect key="frame" x="32" y="44" width="311" height="30"/>
                         <color key="tintColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="PwT-5J-ooT"/>
                         </constraints>
-                        <color key="trackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </progressView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoX-uT-Me6">
+                        <rect key="frame" x="170.5" y="44" width="33.5" height="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" red="1" green="0.97254901959999995" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="hnw-fx-upV" firstAttribute="top" secondItem="Qb5-Sd-WWY" secondAttribute="topMargin" id="8gB-gU-IIj"/>
+                    <constraint firstItem="GoX-uT-Me6" firstAttribute="top" secondItem="BGw-mg-P5k" secondAttribute="top" id="Xm3-ui-CTl"/>
+                    <constraint firstItem="GoX-uT-Me6" firstAttribute="bottom" secondItem="BGw-mg-P5k" secondAttribute="bottom" id="ZNX-t6-INK"/>
                     <constraint firstItem="hnw-fx-upV" firstAttribute="leading" secondItem="Qb5-Sd-WWY" secondAttribute="leadingMargin" constant="16" id="ZrV-zM-qiw"/>
                     <constraint firstItem="BGw-mg-P5k" firstAttribute="bottom" secondItem="Qb5-Sd-WWY" secondAttribute="bottomMargin" id="aQF-G1-x5g"/>
+                    <constraint firstItem="GoX-uT-Me6" firstAttribute="centerX" secondItem="Qb5-Sd-WWY" secondAttribute="centerX" id="ceq-ij-ybX"/>
                     <constraint firstItem="BGw-mg-P5k" firstAttribute="leading" secondItem="Qb5-Sd-WWY" secondAttribute="leadingMargin" constant="16" id="mtD-du-uYD"/>
                     <constraint firstAttribute="trailingMargin" secondItem="BGw-mg-P5k" secondAttribute="trailing" constant="16" id="wdO-eG-1Yz"/>
                     <constraint firstAttribute="trailingMargin" secondItem="hnw-fx-upV" secondAttribute="trailing" constant="16" id="xny-4H-gO8"/>
@@ -49,6 +58,7 @@
             <connections>
                 <outlet property="nameLabel" destination="hnw-fx-upV" id="itk-Bm-3oq"/>
                 <outlet property="noteProgressView" destination="BGw-mg-P5k" id="nzQ-3L-xC2"/>
+                <outlet property="valueLabel" destination="GoX-uT-Me6" id="ChG-nP-cVc"/>
             </connections>
             <point key="canvasLocation" x="-42" y="8"/>
         </tableViewCell>

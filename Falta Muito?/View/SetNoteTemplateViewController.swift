@@ -34,6 +34,12 @@ class SetNoteTemplateViewController: UIViewController, UITableViewDataSource, UI
         self.addDelegate()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        AnalyticsService().addTrackerToScreen(screenName: "Set Note Template")
+    }
+    
     @IBAction func saveAction(_ sender: Any) {
         if (self.selectedNoteTemplates.count > 0) {
             let periodEntity = self.periodPresenter.savePeriod(period: self.period)

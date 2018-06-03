@@ -11,11 +11,13 @@ import UIKit
 class NoteDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var noteProgressView: UIProgressView!
+    @IBOutlet weak var valueLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.selectionStyle = .none
+        self.noteProgressView.layer.cornerRadius = 15
     }
     
     func isWarningMode(isWarningMode: Bool) {

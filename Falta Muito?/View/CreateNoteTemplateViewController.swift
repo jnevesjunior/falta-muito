@@ -32,6 +32,12 @@ class CreateNoteTemplateViewController: UIViewController, UITableViewDataSource,
         self.addDelegate()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        AnalyticsService().addTrackerToScreen(screenName: "Create Note Template")
+    }
+    
     @IBAction func saveAction(_ sender: Any) {
         if (self.notes.count > 0) {
             let periodEntity = self.periodPresenter.savePeriod(period: self.period)
