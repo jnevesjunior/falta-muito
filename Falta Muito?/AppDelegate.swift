@@ -73,7 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             noteTemplate1["name"] = "Avaliação Continuada"
             noteTemplate1["max"] = 10
             noteTemplate1["weight"] = 7
-            noteTemplate1["type"] = 2
+            noteTemplate1["method"] = 2
             noteTemplate1["average"] = 0.25
             noteTempletes.append(noteTemplate1)
             
@@ -81,7 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             noteTemplate2["name"] = "Avaliação Intermediaria"
             noteTemplate2["max"] = 10
             noteTemplate2["weight"] = 7
-            noteTemplate2["type"] = 2
+            noteTemplate2["method"] = 2
             noteTemplate2["average"] = 0.3
             noteTempletes.append(noteTemplate2)
             
@@ -89,7 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             noteTemplate3["name"] = "Avaliação Semestral"
             noteTemplate3["max"] = 10
             noteTemplate3["weight"] = 7
-            noteTemplate3["type"] = 2
+            noteTemplate3["method"] = 2
             noteTemplate3["average"] = 0.45
             noteTempletes.append(noteTemplate3)
             

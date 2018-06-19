@@ -49,4 +49,29 @@ class NotePresenter {
         
         return Float(progress)
     }
+    
+    func calcWeight(notes: [Note]) -> Double {
+        var noteTotaly: Double = 0
+        var method: Int16 = 1
+        
+        if let firstNote = notes.first {
+            method = (firstNote.noteTemplate?.method)!
+        }
+        
+        
+        if (method == 1) {
+            for note in notes {
+                noteTotaly += note.value
+            }
+            return noteTotaly/Double(notes.count)
+        }
+        else {
+            for note in notes {
+                if let average = note.noteTemplate?.average {
+                    noteTotaly += (note.value * average)
+                }
+            }
+            return noteTotaly
+        }
+    }
 }

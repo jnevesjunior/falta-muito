@@ -117,13 +117,7 @@ class CourseDetailViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     private func calcWeight() {
-        var noteTotaly: Double = 0.0
-        
-        for note in self.notes {
-            noteTotaly += note.value
-        }
-        
-        self.setWeight(weight: noteTotaly/Double(self.notes.count))
+        self.setWeight(weight: self.notePresenter.calcWeight(notes: self.notes))
     }
     
     private func setWeight(weight: Double) {

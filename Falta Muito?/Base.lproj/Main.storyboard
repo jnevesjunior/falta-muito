@@ -228,7 +228,7 @@ Calma, você consegue!</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="7" placeholder="Ex: 7" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ihw-1C-CPe" customClass="DefaultTextField" customModule="Falta_Muito_" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="6" placeholder="Ex: 6" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ihw-1C-CPe" customClass="DefaultTextField" customModule="Falta_Muito_" customModuleProvider="target">
                                 <rect key="frame" x="16" y="322" width="163.5" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="VM1-b1-z7b"/>
