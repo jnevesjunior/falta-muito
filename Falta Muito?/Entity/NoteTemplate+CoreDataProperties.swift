@@ -2,7 +2,7 @@
 //  NoteTemplate+CoreDataProperties.swift
 //  Falta Muito?
 //
-//  Created by Jose Neves on 10/04/18.
+//  Created by Jose Neves on 18/06/18.
 //  Copyright © 2018 Jose Neves. All rights reserved.
 //
 //
@@ -20,6 +20,8 @@ extension NoteTemplate {
     @NSManaged public var max: Double
     @NSManaged public var name: String?
     @NSManaged public var weight: Double
+    @NSManaged public var average: Double
+    @NSManaged public var method: Int16
     
     public func createEntity(array: [String: AnyObject]) -> NoteTemplate? {
         let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
@@ -28,11 +30,12 @@ extension NoteTemplate {
             entity.max = (array["max"] as? Double)!
             entity.name = array["name"] as? String
             entity.weight = (array["weight"] as? Double)!
+            entity.average = (array["average"] as? Double)!
+            entity.method = (array["method"] as? Int16)!
             return entity
         }
         else {
             return nil
         }
     }
-
 }
