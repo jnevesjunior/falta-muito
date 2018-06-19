@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -27,37 +27,42 @@
                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <progressView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BGw-mg-P5k">
-                        <rect key="frame" x="32" y="44" width="311" height="30"/>
-                        <color key="tintColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="PwT-5J-ooT"/>
-                        </constraints>
-                        <color key="trackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </progressView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GoX-uT-Me6">
                         <rect key="frame" x="170.5" y="44" width="33.5" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="PQt-On-Oi9"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="textColor" red="1" green="0.97254901959999995" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="djR-tg-6GG" customClass="LargeSlider" customModule="Falta_Muito_" customModuleProvider="target">
+                        <rect key="frame" x="30" y="44" width="315" height="31"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="gTR-Df-0xu"/>
+                        </constraints>
+                        <color key="minimumTrackTintColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="maximumTrackTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </slider>
                 </subviews>
                 <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="hnw-fx-upV" firstAttribute="top" secondItem="Qb5-Sd-WWY" secondAttribute="topMargin" id="8gB-gU-IIj"/>
-                    <constraint firstItem="GoX-uT-Me6" firstAttribute="top" secondItem="BGw-mg-P5k" secondAttribute="top" id="Xm3-ui-CTl"/>
-                    <constraint firstItem="GoX-uT-Me6" firstAttribute="bottom" secondItem="BGw-mg-P5k" secondAttribute="bottom" id="ZNX-t6-INK"/>
+                    <constraint firstItem="djR-tg-6GG" firstAttribute="leading" secondItem="Qb5-Sd-WWY" secondAttribute="leadingMargin" constant="16" id="Z8g-Hm-Q3R"/>
                     <constraint firstItem="hnw-fx-upV" firstAttribute="leading" secondItem="Qb5-Sd-WWY" secondAttribute="leadingMargin" constant="16" id="ZrV-zM-qiw"/>
-                    <constraint firstItem="BGw-mg-P5k" firstAttribute="bottom" secondItem="Qb5-Sd-WWY" secondAttribute="bottomMargin" id="aQF-G1-x5g"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="djR-tg-6GG" secondAttribute="bottom" id="aCU-w0-q1t"/>
                     <constraint firstItem="GoX-uT-Me6" firstAttribute="centerX" secondItem="Qb5-Sd-WWY" secondAttribute="centerX" id="ceq-ij-ybX"/>
-                    <constraint firstItem="BGw-mg-P5k" firstAttribute="leading" secondItem="Qb5-Sd-WWY" secondAttribute="leadingMargin" constant="16" id="mtD-du-uYD"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="BGw-mg-P5k" secondAttribute="trailing" constant="16" id="wdO-eG-1Yz"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="djR-tg-6GG" secondAttribute="trailing" constant="16" id="jMX-LQ-7o6"/>
+                    <constraint firstItem="GoX-uT-Me6" firstAttribute="bottom" secondItem="Qb5-Sd-WWY" secondAttribute="bottomMargin" id="xSb-kv-GXy"/>
                     <constraint firstAttribute="trailingMargin" secondItem="hnw-fx-upV" secondAttribute="trailing" constant="16" id="xny-4H-gO8"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="nameLabel" destination="hnw-fx-upV" id="itk-Bm-3oq"/>
-                <outlet property="noteProgressView" destination="BGw-mg-P5k" id="nzQ-3L-xC2"/>
+                <outlet property="noteSlider" destination="djR-tg-6GG" id="5RN-jG-gQT"/>
                 <outlet property="valueLabel" destination="GoX-uT-Me6" id="ChG-nP-cVc"/>
             </connections>
             <point key="canvasLocation" x="-42" y="8"/>

@@ -40,8 +40,21 @@ class CourseDetailViewController: UIViewController, UITableViewDataSource, UITab
         AnalyticsService().addTrackerToScreen(screenName: "Course Detail")
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        CoreDataService().saveData()
+    }
+    
     @objc private func refreshData(_ sender: Any) {
         self.refreshControl.endRefreshing()
+    }
+    
+    @objc func noteSliderValueChanged(_ sender: LargeSlider) {
+        let note = self.notes[sender.tag]
+        note.value = Double(sender.value)
+        
+        self.calcWeight()
+        sender.isWarningMode(isWarningMode: note.value < (note.noteTemplate?.weight)!)
     }
     
     func setCourse(course: Course) {
@@ -70,38 +83,17 @@ class CourseDetailViewController: UIViewController, UITableViewDataSource, UITab
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "noteDetailTableCell", for: indexPath) as! NoteDetailTableViewCell
         cell.nameLabel.text = note.noteTemplate?.name
-        cell.noteProgressView.setProgress(self.notePresenter.getProgress(note: note), animated: true)
-        cell.isWarningMode(isWarningMode: note.value < (note.noteTemplate?.weight)!)
         cell.valueLabel.text = String(format: "%.2f", note.value)
+        
+        cell.noteSlider.tag = indexPath.section
+        cell.noteSlider.isWarningMode(isWarningMode: note.value < (note.noteTemplate?.weight)!)
+        cell.noteSlider.maximumValue = Float(note.noteTemplate?.max ?? 0)
+        cell.noteSlider.setValue(self.notePresenter.getProgress(note: note), animated: true)
+        cell.noteSlider.addTarget(self, action: #selector(self.noteSliderValueChanged(_:)), for: .valueChanged)
         
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let note = self.notes[indexPath.section]
-        let alert = UIAlertController(title: note.noteTemplate?.name, message: "Quanto você tirou nessa avaliação?", preferredStyle: UIAlertControllerStyle.alert)
-        
-        let action = UIAlertAction(title: "Salvar", style: .default) { (alertAction) in
-            let textField = alert.textFields![0] as UITextField
-            let noteValue = Double(textField.text ?? "") ?? 0
-            
-            if (noteValue <= Double((self.course.period?.maxNote)!)) {
-                self.notes[indexPath.section].value = noteValue
-                self.calcWeight()
-                self.noteDetailTableView.reloadData()
-                CoreDataService().saveData()
-            }
-        }
-        
-        alert.addTextField { (textField) in
-            textField.placeholder = "Digite a sua nota"
-            textField.keyboardType = .decimalPad
-            textField.text = "\(note.value)"
-        }
-        alert.addAction(action)
-        
-        self.present(alert, animated: true, completion: nil)
-    }
     
     private func addDelegate() {
         self.noteDetailTableView.delegate = self
