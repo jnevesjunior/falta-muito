@@ -22,6 +22,10 @@ import UIKit
         return customBounds
     }
     
+    override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {
+        return true
+    }
+    
     func isWarningMode(isWarningMode: Bool) {
         if (isWarningMode) {
             self.minimumTrackTintColor = UIColor.red
