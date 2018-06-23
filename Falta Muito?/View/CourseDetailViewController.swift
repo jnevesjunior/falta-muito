@@ -50,8 +50,11 @@ class CourseDetailViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     @objc func noteSliderValueChanged(_ sender: LargeSlider) {
+        let value = round(sender.value * 20) / 20
+        sender.setValue(value, animated: true)
+        
         let note = self.notes[sender.tag]
-        note.value = Double(sender.value)
+        note.value = Double(value)
         
         self.calcWeight()
         sender.isWarningMode(isWarningMode: note.value < (note.noteTemplate?.weight)!)
