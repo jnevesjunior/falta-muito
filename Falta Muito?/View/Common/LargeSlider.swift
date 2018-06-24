@@ -10,16 +10,26 @@ import UIKit
 
 @IBDesignable class LargeSlider: UISlider {
     
-    @IBInspectable var sliderHeight: CGFloat = 30
+    @IBInspectable var sliderHeight: CGFloat = 25
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.layer.cornerRadius = self.sliderHeight / 2
+        self.layer.masksToBounds = true
+    }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     
     override func trackRect(forBounds bounds: CGRect) -> CGRect {
-        let customBounds = CGRect(origin: bounds.origin, size: CGSize(width: bounds.size.width, height: self.sliderHeight))
-        super.trackRect(forBounds: customBounds)
-        return customBounds
+        let size = CGSize(width: bounds.size.width, height: self.sliderHeight)
+
+        return CGRect(origin: bounds.origin, size: size)
     }
     
     override func beginTracking(_ touch: UITouch, with event: UIEvent?) -> Bool {

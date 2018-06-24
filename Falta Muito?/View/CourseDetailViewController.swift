@@ -86,7 +86,6 @@ class CourseDetailViewController: UIViewController, UITableViewDataSource, UITab
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "noteDetailTableCell", for: indexPath) as! NoteDetailTableViewCell
         cell.nameLabel.text = note.noteTemplate?.name
-        cell.valueLabel.text = String(format: "%.2f", note.value)
         
         cell.noteSlider.tag = indexPath.section
         cell.noteSlider.isWarningMode(isWarningMode: note.value < (note.noteTemplate?.weight)!)
