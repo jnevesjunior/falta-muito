@@ -17,18 +17,18 @@ extension Period {
         return NSFetchRequest<Period>(entityName: "Period")
     }
 
-    @NSManaged public var averageNote: Double
+    @NSManaged public var averageNote: Float
     @NSManaged public var courses: Int16
-    @NSManaged public var maxNote: Double
+    @NSManaged public var maxNote: Float
     @NSManaged public var name: String?
     
     public func createEntity(array: [String: AnyObject]) -> Period? {
         let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
         
         if let entity = NSEntityDescription.insertNewObject(forEntityName: "Period", into: context) as? Period {
-            entity.averageNote = (array["averageNote"] as? Double)!
+            entity.averageNote = (array["averageNote"] as? Float)!
             entity.courses = (array["courses"] as? Int16)!
-            entity.maxNote = (array["maxNote"] as? Double)!
+            entity.maxNote = (array["maxNote"] as? Float)!
             entity.name = array["name"] as? String
             return entity
         }

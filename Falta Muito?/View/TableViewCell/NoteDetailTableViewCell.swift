@@ -10,6 +10,7 @@ import UIKit
 
 class NoteDetailTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var noteSlider: LargeSlider!
     
     override func awakeFromNib() {

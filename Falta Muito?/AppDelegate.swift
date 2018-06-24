@@ -75,7 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             noteTemplate1["max"] = 10
             noteTemplate1["weight"] = 6
             noteTemplate1["method"] = 2
-            noteTemplate1["average"] = 0.25
+            noteTemplate1["average"] = Float(0.25)
             noteTempletes.append(noteTemplate1)
             
             var noteTemplate2 = [String: Any]()
@@ -83,7 +83,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             noteTemplate2["max"] = 10
             noteTemplate2["weight"] = 6
             noteTemplate2["method"] = 2
-            noteTemplate2["average"] = 0.3
+            noteTemplate2["average"] = Float(0.3)
             noteTempletes.append(noteTemplate2)
             
             var noteTemplate3 = [String: Any]()
@@ -91,7 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             noteTemplate3["max"] = 10
             noteTemplate3["weight"] = 6
             noteTemplate3["method"] = 2
-            noteTemplate3["average"] = 0.45
+            noteTemplate3["average"] = Float(0.45)
             noteTempletes.append(noteTemplate3)
             
             

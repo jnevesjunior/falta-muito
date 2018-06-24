@@ -44,14 +44,8 @@ class NotePresenter {
         return notesObj
     }
     
-    func getProgress(note: Note) -> Float {
-        let progress = note.value/(note.noteTemplate?.max)!
-        
-        return Float(progress)
-    }
-    
-    func calcWeight(notes: [Note]) -> Double {
-        var noteTotaly: Double = 0
+    func calcWeight(notes: [Note]) -> Float {
+        var noteTotaly: Float = 0
         var method: Int16 = 1
         
         if let firstNote = notes.first {
@@ -63,7 +57,7 @@ class NotePresenter {
             for note in notes {
                 noteTotaly += note.value
             }
-            return noteTotaly/Double(notes.count)
+            return noteTotaly / Float(notes.count)
         }
         else {
             for note in notes {

@@ -54,10 +54,11 @@ class CourseDetailViewController: UIViewController, UITableViewDataSource, UITab
         sender.setValue(value, animated: true)
         
         let note = self.notes[sender.tag]
-        note.value = Double(value)
+        note.value = value
         
         self.calcWeight()
         sender.isWarningMode(isWarningMode: note.value < (note.noteTemplate?.weight)!)
+        self.noteDetailTableView.reloadData()
     }
     
     func setCourse(course: Course) {
@@ -90,8 +91,9 @@ class CourseDetailViewController: UIViewController, UITableViewDataSource, UITab
         cell.noteSlider.tag = indexPath.section
         cell.noteSlider.isWarningMode(isWarningMode: note.value < (note.noteTemplate?.weight)!)
         cell.noteSlider.maximumValue = Float(note.noteTemplate?.max ?? 0)
-        cell.noteSlider.setValue(self.notePresenter.getProgress(note: note), animated: true)
+        cell.noteSlider.setValue(note.value, animated: true)
         cell.noteSlider.addTarget(self, action: #selector(self.noteSliderValueChanged(_:)), for: .valueChanged)
+        cell.valueLabel.text = "\(note.value)"
         
         return cell
     }
@@ -114,7 +116,7 @@ class CourseDetailViewController: UIViewController, UITableViewDataSource, UITab
         self.setWeight(weight: self.notePresenter.calcWeight(notes: self.notes))
     }
     
-    private func setWeight(weight: Double) {
+    private func setWeight(weight: Float) {
         self.weightCircularProgress.setProgress(to: CGFloat(weight), duration: 1.0)
         
         if (weight < (self.course.period?.averageNote)!) {

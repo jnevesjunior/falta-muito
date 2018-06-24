@@ -17,7 +17,7 @@ extension Note {
         return NSFetchRequest<Note>(entityName: "Note")
     }
 
-    @NSManaged public var value: Double
+    @NSManaged public var value: Float
     @NSManaged public var course: Course?
     @NSManaged public var noteTemplate: NoteTemplate?
     
@@ -25,7 +25,7 @@ extension Note {
         let context = CoreDataStack.sharedInstance.persistentContainer.viewContext
         
         if let entity = NSEntityDescription.insertNewObject(forEntityName: "Note", into: context) as? Note {
-            entity.value = (array["value"] as? Double)!
+            entity.value = (array["value"] as? Float)!
             entity.course = array["course"] as? Course
             entity.noteTemplate = array["noteTemplate"] as? NoteTemplate
             

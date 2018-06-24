@@ -27,6 +27,7 @@
                         </constraints>
                         <color key="minimumTrackTintColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="maximumTrackTintColor" red="0.99999600649999998" green="1" blue="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="thumbTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="sliderHeight">
                                 <real key="value" value="25"/>
@@ -36,8 +37,8 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </slider>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matéria" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnw-fx-upV">
-                        <rect key="frame" x="32" y="11" width="311" height="22"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matéria" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnw-fx-upV">
+                        <rect key="frame" x="16" y="11" width="290" height="22"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="22" id="30w-yV-fqE"/>
                         </constraints>
@@ -61,24 +62,37 @@
                             <constraint firstAttribute="width" constant="24" id="tlK-9N-Skb"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RQ-IV-gyV">
+                        <rect key="frame" x="314" y="11" width="45" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="5v3-Rf-e8H"/>
+                            <constraint firstAttribute="height" constant="22" id="zgE-Or-uk4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" red="1" green="0.97254901959999995" blue="0.88235294119999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="Cvt-oz-XAA" firstAttribute="bottom" secondItem="Qb5-Sd-WWY" secondAttribute="bottomMargin" id="4PI-Lp-vW7"/>
                     <constraint firstItem="hnw-fx-upV" firstAttribute="top" secondItem="Qb5-Sd-WWY" secondAttribute="topMargin" id="8gB-gU-IIj"/>
                     <constraint firstItem="Cvt-oz-XAA" firstAttribute="trailing" secondItem="Qb5-Sd-WWY" secondAttribute="trailingMargin" id="KFA-a6-e97"/>
+                    <constraint firstItem="1RQ-IV-gyV" firstAttribute="trailing" secondItem="Qb5-Sd-WWY" secondAttribute="trailingMargin" id="RtE-SZ-B4z"/>
                     <constraint firstItem="wQB-kw-1To" firstAttribute="leading" secondItem="Qb5-Sd-WWY" secondAttribute="leadingMargin" id="SZ5-k2-rEg"/>
                     <constraint firstItem="djR-tg-6GG" firstAttribute="leading" secondItem="wQB-kw-1To" secondAttribute="trailing" constant="8" id="Z8g-Hm-Q3R"/>
-                    <constraint firstItem="hnw-fx-upV" firstAttribute="leading" secondItem="Qb5-Sd-WWY" secondAttribute="leadingMargin" constant="16" id="ZrV-zM-qiw"/>
+                    <constraint firstItem="hnw-fx-upV" firstAttribute="leading" secondItem="Qb5-Sd-WWY" secondAttribute="leadingMargin" id="ZrV-zM-qiw"/>
                     <constraint firstAttribute="bottomMargin" secondItem="djR-tg-6GG" secondAttribute="bottom" id="aCU-w0-q1t"/>
                     <constraint firstItem="wQB-kw-1To" firstAttribute="bottom" secondItem="Qb5-Sd-WWY" secondAttribute="bottomMargin" id="dJB-6C-N2Q"/>
                     <constraint firstItem="Cvt-oz-XAA" firstAttribute="leading" secondItem="djR-tg-6GG" secondAttribute="trailing" constant="8" id="jMX-LQ-7o6"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="hnw-fx-upV" secondAttribute="trailing" constant="16" id="xny-4H-gO8"/>
+                    <constraint firstItem="1RQ-IV-gyV" firstAttribute="leading" secondItem="hnw-fx-upV" secondAttribute="trailing" constant="8" id="xny-4H-gO8"/>
+                    <constraint firstItem="1RQ-IV-gyV" firstAttribute="top" secondItem="Qb5-Sd-WWY" secondAttribute="topMargin" id="zlQ-I9-T7M"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="nameLabel" destination="hnw-fx-upV" id="itk-Bm-3oq"/>
                 <outlet property="noteSlider" destination="djR-tg-6GG" id="5RN-jG-gQT"/>
+                <outlet property="valueLabel" destination="1RQ-IV-gyV" id="NM3-43-9sd"/>
             </connections>
             <point key="canvasLocation" x="-30" y="15"/>
         </tableViewCell>
