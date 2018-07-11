@@ -8,6 +8,7 @@
 
 import UIKit
 import UICircularProgressRing
+import fluid_slider
 
 class CourseDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var noteDetailTableView: UITableView!
@@ -49,15 +50,13 @@ class CourseDetailViewController: UIViewController, UITableViewDataSource, UITab
         self.refreshControl.endRefreshing()
     }
     
-    @objc func noteSliderValueChanged(_ sender: LargeSlider) {
-        let value = round(sender.value * 20) / 20
-        sender.setValue(value, animated: true)
-        
+    @objc func noteSliderValueChanged(_ sender: Slider) {
         let note = self.notes[sender.tag]
-        note.value = value
+        let value = sender.fraction * CGFloat(note.noteTemplate?.max ?? 0)
         
+        note.value = Float(round(value * 100) / 100)
+
         self.calcWeight()
-        sender.isWarningMode(isWarningMode: note.value < (note.noteTemplate?.weight)!)
         self.noteDetailTableView.reloadData()
     }
     
@@ -88,12 +87,12 @@ class CourseDetailViewController: UIViewController, UITableViewDataSource, UITab
         let cell = tableView.dequeueReusableCell(withIdentifier: "noteDetailTableCell", for: indexPath) as! NoteDetailTableViewCell
         cell.nameLabel.text = note.noteTemplate?.name
         
-        cell.noteSlider.tag = indexPath.section
-        cell.noteSlider.isWarningMode(isWarningMode: note.value < (note.noteTemplate?.weight)!)
-        cell.noteSlider.maximumValue = Float(note.noteTemplate?.max ?? 0)
-        cell.noteSlider.setValue(note.value, animated: true)
-        cell.noteSlider.addTarget(self, action: #selector(self.noteSliderValueChanged(_:)), for: .valueChanged)
-        cell.valueLabel.text = "\(note.value)"
+        cell.slider.tag = indexPath.section
+        cell.slider.addTarget(self, action: #selector(self.noteSliderValueChanged(_:)), for: .valueChanged)
+        
+        cell.setMaxSliderValue(maxValue: CGFloat(note.noteTemplate?.max ?? 0))
+        cell.setSliderValue(value: CGFloat(note.value))
+        cell.isWarningMode(isWarningMode: note.value < (note.noteTemplate?.weight)!)
         
         return cell
     }

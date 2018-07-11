@@ -10,5 +10,6 @@ target 'Falta Muito?' do
   pod 'GoogleAnalytics'
   pod 'Firebase/Core'
   pod 'Firebase/Messaging'
+  pod 'fluid-slider'
 
 end

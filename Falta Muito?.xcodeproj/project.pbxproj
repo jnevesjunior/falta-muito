@@ -73,8 +73,6 @@
 		2D6D873B20854CB3005AF594 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6D873A20854CB3005AF594 /* AnalyticsService.swift */; };
 		2D6E9EE8207AF11C00A9759F /* NoteTemplate+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E9EE6207AF11C00A9759F /* NoteTemplate+CoreDataClass.swift */; };
 		2D6E9EE9207AF11C00A9759F /* NoteTemplate+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6E9EE7207AF11C00A9759F /* NoteTemplate+CoreDataProperties.swift */; };
-		2D73387D20D89B4A00CB35D8 /* LargeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D73387C20D89B4A00CB35D8 /* LargeSlider.swift */; };
-		2D73387E20D89B4A00CB35D8 /* LargeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D73387C20D89B4A00CB35D8 /* LargeSlider.swift */; };
 		2D955024202CA693001BF93F /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D955020202CA693001BF93F /* Note+CoreDataClass.swift */; };
 		2D955025202CA693001BF93F /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D955021202CA693001BF93F /* Note+CoreDataProperties.swift */; };
 		2D955026202CA693001BF93F /* Course+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D955022202CA693001BF93F /* Course+CoreDataClass.swift */; };
@@ -124,7 +122,6 @@
 		2D6D873A20854CB3005AF594 /* AnalyticsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		2D6E9EE6207AF11C00A9759F /* NoteTemplate+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteTemplate+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2D6E9EE7207AF11C00A9759F /* NoteTemplate+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteTemplate+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2D73387C20D89B4A00CB35D8 /* LargeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeSlider.swift; sourceTree = "<group>"; };
 		2D955020202CA693001BF93F /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2D955021202CA693001BF93F /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2D955022202CA693001BF93F /* Course+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -337,7 +334,6 @@
 			isa = PBXGroup;
 			children = (
 				2DF89F9E207FF79A005256CD /* DefaultTextField.swift */,
-				2D73387C20D89B4A00CB35D8 /* LargeSlider.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -501,14 +497,18 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
+				"${BUILT_PRODUCTS_DIR}/fluid-slider/fluid_slider.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/fluid_slider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -548,7 +548,6 @@
 				2D502C3320C46C4A009975A0 /* Course+CoreDataClass.swift in Sources */,
 				2D502C3420C46C4A009975A0 /* CreateNoteTemplateViewController.swift in Sources */,
 				2D502C3520C46C4A009975A0 /* Falta_Muito.xcdatamodeld in Sources */,
-				2D73387E20D89B4A00CB35D8 /* LargeSlider.swift in Sources */,
 				2D502C3620C46C4A009975A0 /* PeriodViewController.swift in Sources */,
 				2D502C3720C46C4A009975A0 /* NoteTemplate+CoreDataProperties.swift in Sources */,
 				2D502C3820C46C4A009975A0 /* CoursePresenter.swift in Sources */,
@@ -588,7 +587,6 @@
 				2D955026202CA693001BF93F /* Course+CoreDataClass.swift in Sources */,
 				2D556E58202DFA1400A3DF8D /* CreateNoteTemplateViewController.swift in Sources */,
 				2DD0A6CA200D315800B18E07 /* Falta_Muito.xcdatamodeld in Sources */,
-				2D73387D20D89B4A00CB35D8 /* LargeSlider.swift in Sources */,
 				2DA51F062019588000ED6B3F /* PeriodViewController.swift in Sources */,
 				2D6E9EE9207AF11C00A9759F /* NoteTemplate+CoreDataProperties.swift in Sources */,
 				2DEC84892071BA4F0004B55E /* CoursePresenter.swift in Sources */,
