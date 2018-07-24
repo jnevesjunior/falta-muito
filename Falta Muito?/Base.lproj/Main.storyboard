@@ -109,7 +109,7 @@ Aproveitei o pouco tempo que sobrou para desenvolver esse app e não ter que pas
                     <tabBarItem key="tabBarItem" title="Item 1" id="zxM-d9-10F"/>
                     <navigationItem key="navigationItem" title="Períodos" id="RRa-Zu-IAD">
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="ls1-HA-qDa"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qdN-BT-I4M">
+                        <barButtonItem key="rightBarButtonItem" image="round_add_black_24pt" id="qdN-BT-I4M">
                             <connections>
                                 <action selector="createAction:" destination="U1A-dj-hHR" id="abw-xG-ZyX"/>
                             </connections>
@@ -625,7 +625,7 @@ Quantas provas você tem?</string>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8P-1d-jCo" customClass="UICircularProgressRingView" customModule="UICircularProgressRing">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8P-1d-jCo" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
                                         <rect key="frame" x="80" y="0.0" width="70" height="70"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -745,6 +745,7 @@ Quantas provas você tem?</string>
         <image name="ic_add_circle_outline_48pt" width="48" height="48"/>
         <image name="ic_assignment_36pt" width="36" height="36"/>
         <image name="ic_info_outline_36pt" width="36" height="36"/>
+        <image name="round_add_black_24pt" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="XgD-Jm-g7d"/>

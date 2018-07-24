@@ -12,7 +12,7 @@ import fluid_slider
 
 class CourseDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var noteDetailTableView: UITableView!
-    @IBOutlet weak var weightCircularProgress: UICircularProgressRingView!
+    @IBOutlet weak var weightCircularProgress: UICircularProgressRing!
     
     private let refreshControl = UIRefreshControl()
     private var course: Course!
@@ -116,7 +116,7 @@ class CourseDetailViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     private func setWeight(weight: Float) {
-        self.weightCircularProgress.setProgress(to: CGFloat(weight), duration: 1.0)
+        self.weightCircularProgress.startProgress(to: CGFloat(weight), duration: 1.0)
         
         if (weight < (self.course.period?.averageNote)!) {
             self.weightCircularProgress.innerRingColor = UIColor.red
