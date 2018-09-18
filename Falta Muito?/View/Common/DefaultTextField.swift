@@ -121,7 +121,7 @@ import UIKit
     
     func updateView() {
         if let image = leftImage {
-            leftViewMode = UITextFieldViewMode.always
+            leftViewMode = UITextField.ViewMode.always
             
             let size = self.frame.height
             let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: size/1.5, height: size/1.5))
@@ -129,13 +129,13 @@ import UIKit
             
             leftView = imageView
         } else {
-            leftViewMode = UITextFieldViewMode.never
+            leftViewMode = UITextField.ViewMode.never
             leftView = nil
         }
         
         let placeholderColor = UIColor(white: 0/255, alpha: 0.25)
         let placeholderText = placeholder != nil ?  placeholder! : ""
         
-        attributedPlaceholder = NSAttributedString(string: placeholderText, attributes: [NSAttributedStringKey.foregroundColor: placeholderColor])
+        attributedPlaceholder = NSAttributedString(string: placeholderText, attributes: [NSAttributedString.Key.foregroundColor: placeholderColor])
     }
 }

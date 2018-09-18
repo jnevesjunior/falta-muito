@@ -10,6 +10,6 @@ class AnalyticsService {
     func addTrackerToScreen(screenName: String) {
         let tracker = GAI.sharedInstance().defaultTracker
         tracker?.set(kGAIScreenName, value: screenName)
-        tracker?.send((GAIDictionaryBuilder.createScreenView().build() as NSDictionary) as! [AnyHashable: Any])
+        tracker?.send((GAIDictionaryBuilder.createScreenView().build() as NSDictionary) as? [AnyHashable: Any])
     }
 }

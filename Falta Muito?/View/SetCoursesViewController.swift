@@ -90,7 +90,7 @@ class SetCoursesViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let alert = UIAlertController(title: self.courses[indexPath.section], message: "Dê um nome para essa matéria", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: self.courses[indexPath.section], message: "Dê um nome para essa matéria", preferredStyle: UIAlertController.Style.alert)
         
         let action = UIAlertAction(title: "Salvar", style: .default) { (alertAction) in
             let textField = alert.textFields![0] as UITextField

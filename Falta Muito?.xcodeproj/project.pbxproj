@@ -92,7 +92,6 @@
 		2DD0A6CF200D315800B18E07 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD0A6CD200D315800B18E07 /* LaunchScreen.storyboard */; };
 		2DEC84892071BA4F0004B55E /* CoursePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC84882071BA4F0004B55E /* CoursePresenter.swift */; };
 		2DF89F9F207FF79A005256CD /* DefaultTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF89F9E207FF79A005256CD /* DefaultTextField.swift */; };
-		94B0DF8BBB586909A4FF711C /* Pods_Falta_Muito_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73762544A6C82514CF546CEA /* Pods_Falta_Muito_.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,7 +161,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A93BEBD952AD9D5997D4EB6 /* Pods_Falta_Muito_.framework in Frameworks */,
-				94B0DF8BBB586909A4FF711C /* Pods_Falta_Muito_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,7 +390,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "Jose Neves";
 				TargetAttributes = {
 					2D502C1920C46C4A009975A0 = {
@@ -400,6 +398,7 @@
 					};
 					2DD0A6BD200D315800B18E07 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -779,7 +778,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.joseneves.Falta-Muito";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/joseneves/Xcode/falta-muito/Falta Muito?/Headers/Falta-Muito-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -798,7 +797,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.joseneves.Falta-Muito";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/joseneves/Xcode/falta-muito/Falta Muito?/Headers/Falta-Muito-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
